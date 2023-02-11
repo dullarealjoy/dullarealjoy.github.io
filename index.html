@@ -25,250 +25,493 @@
   </head>
 
   <body>
-   
-        <!-- offcanvas -->
-        <!-- <div class="offcanvas offcanvas-top z-1" data-bs-scroll="true"  tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <!-- offcanvas -->
+    <!-- <div class="offcanvas offcanvas-top z-1" data-bs-scroll="true"  tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
           <div class="offcanvas-header btn-fback">
             <a class="offcanvas-title navbar-brand fs-3 fw-bolder" id="offcanvasWithBothOptionLabels" href="#">
               <span class="ms-2 ms-lg-1 fw-bolder"> alt=""></span>
             </a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div> -->
-          <div
-          class=" offcanvasMenu offcanvas offcanvas-top  z-1 rounded-2 shadow-lg p-4 mb-4 h-75"
-          tabindex="1"
-          id="offcanvasWithBothOptions"
-          aria-labelledby="offcanvasTopLabel"
-          data-bs-backdrop="true"
-        >
-          <div class="offcanvas-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <!-- off-canvas content -->
-          <div class="offcanvas-body small section-head ">
-            
-            <ul class="navbar-nav ms-auto d-flex fw-bolder">
-              <!--dropdown-Product  -->
-              <div class="row">
-                
-                <div class="col-3">
-                  <li class="nav-item dropdown">
-                    <a
+    <div
+      class="offcanvasMenu offcanvas offcanvas-top z-1 rounded-2 shadow-lg p-4 mb-4 h-75"
+      tabindex="1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasTopLabel"
+      data-bs-backdrop="true"
+    >
+      <div class="offcanvas-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!-- off-canvas content -->
+      <div class="offcanvas-body small section-head">
+        <ul class="navbar-nav ms-auto d-flex fw-bolder">
+          <!--dropdown-Product  -->
+          <div class="row">
+            <div class="col-3">
+              <li class="nav-item dropdown">
+                <!-- <a
                       href="#"
                       class="nav-link dropdown-toggle me-3 overflow-y-hidden"
                       role="button"
-                      data-bs-toggle="offcanvas"
-                      data-bs-target="#offcanvasTop"
-                    >
-                  
-                      <i class="fa-solid fa-store"></i>M<span>Store</span>
+                      data-bs-toggle="dropdown"
+                      data-bs-target="#dropdown"  
+                    > -->
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-store"></i>M<span>Store</span>
+                </a>
+                <ul class="dropdown-menu bg-info">
+                  <li>
+                    <a href="#" class="dropdown-item fw-bolder mt-2">
+                      <i class="fa-brands fa-product-hunt"></i>
+                      MS- <span>Products</span>
                     </a>
                   </li>
-                </div>
 
-                <div class="col-3">
-                  <li class="nav-item me-3">
-                    <a href="#" class="nav-link">
-                      <i class="fa-solid fa-circle-info"></i>
-                      <i class="fa-duotone fa-m fw-bolder"></i>s-Trevia</a>
+                  <li>
+                    <a href="#" class="dropdown-item fw-bolder mt-2">
+                      <i class="fa-solid fa-gifts"> </i> MS-<span
+                        >Giftpacks</span
+                      >
+                    </a>
                   </li>
+
+                  <li>
+                    <a href="#" class="dropdown-item fw-bolder mt-2">
+                      <i class="fa-solid fa-hand-holding-hand"></i>
+                      MS-<span>kinCare</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="dropdown-item fw-bolder mt-2">
+                      <i class="fa-solid fa-hands-holding-child"></i>
+                      MS-<span>Infant-Care</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="dropdown-item fw-bolder mt-2">
+                      <i class="fa-solid fa-house-circle-check"></i>
+                      MS-<span>HomeCare</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="dropdown-item fw-bolder mt-2">
+                      <i class="fa-solid fa-suitcase-medical"></i>
+                      MS-<span>Health-<span>S</span>-Wealth</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="dropdown-item fw-bolder mt-2">
+                      <i class="fa-solid fa-heart"></i>
+                      MS-<span>Accessories</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </div>
+
+            <div class="col-3">
+              <li class="nav-item me-3">
+                <a href="#" class="nav-link">
+                  <i class="fa-solid fa-circle-info"></i>
+                  <i class="fa-duotone fa-m fw-bolder"></i>s-Trevia</a
+                >
+              </li>
+            </div>
+
+            <div class="col-3">
+              <li class="nav-item me-5">
+                <a href="#" class="nav-link">
+                  <i class="fa-solid fa-address-card"></i>
+                  <i class="fa-duotone fa-m fw-bolder"></i>emberShip</a
+                >
+              </li>
+            </div>
+
+            <div class="col-3">
+              <li class="nav-item me-2 border-start border-3 border-dark">
+                <a href="#" class="nav-link">
+                  <i class="fa-solid fa-cart-shopping ms-3"></i>
+                  <i class="fa-duotone fa-m fw-bolder"></i>-Cart</a
+                >
+              </li>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4">
+              <div
+                class="card mt-3 mb-3 pb-2 shadow-lg border border-2 border-dark"
+                style="width: 15rem; height: 24rem"
+              >
+                <!-- carousel -->
+
+                <div
+                  id="bestSellerCarousel1"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#bestSellerCarousel1"
+                      data-bs-slide-to="0"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#bestSellerCarousel1"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#bestSellerCarousel1"
+                      data-bs-slide-to="2"
+                      aria-label="Slide 3"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#bestSellerCarousel1"
+                      data-bs-slide-to="3"
+                      aria-label="Slide 3"
+                    ></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                      <img
+                        src="./assets/pictures/product images/best seller 1.png"
+                        class="d-block w-100"
+                        alt="..."
+                        height="190rem"
+                      />
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                      <img
+                        src="./assets/pictures/product images/best seller 2.png"
+                        class="d-block w-100"
+                        alt="..."
+                        height="190rem"
+                      />
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                      <img
+                        src="./assets/pictures/product images/best seller 3.png"
+                        class="d-block w-100"
+                        alt="..."
+                        height="190rem"
+                      />
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                      <img
+                        src="./assets/pictures/product images/best seller 4.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                        height="190rem"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#bestSellerCarousel1"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#bestSellerCarousel1"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
                 </div>
-               
-                <div class="col-3">
-                  <li class="nav-item me-5">
-                    <a href="#" class="nav-link">
-                      <i class="fa-solid fa-address-card"></i>
-                      <i class="fa-duotone fa-m fw-bolder"></i>emberShip</a>
-                  </li>
-                </div>
-               
-                <div class="col-3">
-                  <li class="nav-item me-2 border-start border-3 border-dark">
-                    <a href="#" class="nav-link">
-                      <i class="fa-solid fa-cart-shopping ms-3"></i>
-                      <i class="fa-duotone fa-m fw-bolder "></i>-Cart</a>
-                  </li>
-              
+                <!-- carousel end -->
+
+                <div class="card-body">
+                  <h5 class="card-title text-center fw-bolder">Best Seller</h5>
+                  <p class="card-text">
+                    <i class="fa-solid fa-m"></i> Best Selling Products which
+                    touch there life.
+                  </p>
+                  <a
+                    href="#"
+                    class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold"
+                    >Check it
+                  </a>
                 </div>
               </div>
+            </div>
 
-                <div class="row">
-                  <div class="col-4">
-                    <div
-                    class="card mt-3 mb-3 pb-2 shadow-lg border border-2 border-dark"
-                    style="width: 15rem; height: 24rem"
+            <div class="col-4">
+              <div
+                class="card mt-3 mb-3 pb-2 shadow-lg border border-2 border-dark"
+                style="width: 15rem; height: 24rem"
+              >
+                <!-- carousel -->
+                <div
+                  id="NewArrivalCarousel1"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#NewArrivalCarousel1"
+                      data-bs-slide-to="0"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#NewArrivalCarousel1"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#NewArrivalCarousel1"
+                      data-bs-slide-to="2"
+                      aria-label="Slide 3"
+                    ></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="6000">
+                      <img
+                        src="./assets/pictures/hp1.png"
+                        class="d-block w-100"
+                        alt="..."
+                        height="190rem"
+                      />
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                      <img
+                        src="./assets/pictures/hp2.png"
+                        class="d-block w-100"
+                        alt="..."
+                        height="190rem"
+                      />
+                    </div>
+                    <div class="carousel-item" data-bs-interval="6000">
+                      <img
+                        src="./assets/pictures/hp3.png"
+                        class="d-block w-100"
+                        alt="..."
+                        height="190rem"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#NewArrivalCarousel1"
+                    data-bs-slide="prev"
                   >
-                  <!-- carousel -->
-  
-                  <div id="bestSellerCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#bestSellerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#bestSellerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#bestSellerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                      <button type="button" data-bs-target="#bestSellerCarousel" data-bs-slide-to="3" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="5000">
-                        <img src="./assets/pictures/product images/best seller 1.png" class="d-block w-100" alt="..." height="190rem">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img src="./assets/pictures/product images/best seller 2.png" class="d-block w-100" alt="..." height="190rem">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img src="./assets/pictures/product images/best seller 3.png" class="d-block w-100" alt="..." height="190rem">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img src="./assets/pictures/product images/best seller 4.jpg" class="d-block w-100" alt="..." height="190rem">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#bestSellerCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#bestSellerCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                  <!-- carousel end -->
-                
-                    
-                    <div class="card-body">
-                      <h5 class="card-title text-center fw-bolder">Best Seller</h5>
-                      <p class="card-text">
-                        <i class="fa-solid fa-m"></i> Best Selling Products which touch there life.
-                      </p>
-                      <a
-                        href="#"
-                        class="btnDrpdown btn btn-info d-flex justify-content-center  text-light fw-bold"
-                        >Check it
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="col-4">
-                  <div
-                    class="card mt-3 mb-3 pb-2 shadow-lg border border-2 border-dark"
-                    style="width: 15rem; height: 24rem"
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#NewArrivalCarousel1"
+                    data-bs-slide="next"
                   >
-                  <!-- carousel -->
-                  <div id="NewArrivalCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#NewArrivalCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#NewArrivalCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#NewArrivalCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="6000">
-                        <img src="./assets/pictures/hp1.png" class="d-block w-100" alt="..." height="190rem">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img src="./assets/pictures/hp2.png" class="d-block w-100" alt="..." height="190rem">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="6000">
-                        <img src="./assets/pictures/hp3.png" class="d-block w-100" alt="..." height="190rem">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#NewArrivalCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#NewArrivalCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                  <!-- carousel end -->
-  
-                    
-                    <div class="card-body">
-                      <h5 class="card-title text-center fw-bolder">New-Arrival</h5>
-                      <p class="card-text">
-                        <i class="fa-solid fa-m"></i> New Arrival Products which can Touch your Life.
-                      </p>
-                      <a
-                        href="#"
-                        class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold"
-                        >See More</a
-                      >
-                    </div>
-                  </div>
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
                 </div>
-                <div class="col-4">
-                  <div
-                    class="card mt-3 mb-3 pb-2 shadow-lg border border-2 border-dark"
-                    style="width: 15rem; height: 24rem"
+                <!-- carousel end -->
+
+                <div class="card-body">
+                  <h5 class="card-title text-center fw-bolder">New-Arrival</h5>
+                  <p class="card-text">
+                    <i class="fa-solid fa-m"></i> New Arrival Products which can
+                    Touch your Life.
+                  </p>
+                  <a
+                    href="#"
+                    class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold"
+                    >See More</a
                   >
-  
-                    <!-- carousel -->
-  
-                    <div id="DscountCarousel" class="carousel slide" data-bs-ride="carousel">
-                      <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#DscountCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#DscountCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#DscountCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#DscountCarousel" data-bs-slide-to="3" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#DscountCarousel" data-bs-slide-to="4" aria-label="Slide 3"></button>
-                      </div>
-                      <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="5000">
-                          <img src="./assets/pictures/product images/discounts/discount(4).png" class="d-block w-100" alt="..." height="190rem">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="6000">
-                          <img src="./assets/pictures/product images/discounts/discount(3).png" class="d-block w-100" alt="..." height="190rem">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="6000">
-                          <img src="./assets/pictures/product images/discounts/discount(1).png" class="d-block w-100" alt="..." height="190rem">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="5000">
-                          <img src="./assets/pictures/product images/discounts/discount(5).png" class="d-block w-100" alt="..." height="190rem">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="6000">
-                          <img src="./assets/pictures/product images/discounts/discount(2).png" class="d-block w-100" alt="..." height="190rem">
-                        </div>
-                      </div>
-                      <button class="carousel-control-prev" type="button" data-bs-target="#DscountCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#DscountCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                      </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div
+                class="card mt-3 mb-3 pb-2 shadow-lg border border-2 border-dark"
+                style="width: 15rem; height: 24rem"
+              >
+                <!-- carousel -->
+
+                <div
+                  id="DscountCarousel1"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#DscountCarousel1"
+                      data-bs-slide-to="0"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#DscountCarousel1"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#DscountCarousel1"
+                      data-bs-slide-to="2"
+                      aria-label="Slide 3"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#DscountCarousel1"
+                      data-bs-slide-to="3"
+                      aria-label="Slide 3"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#DscountCarousel1"
+                      data-bs-slide-to="4"
+                      aria-label="Slide 3"
+                    ></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                      <img
+                        src="./assets/pictures/product images/discounts/discount(4).png"
+                        class="d-block w-100"
+                        alt="..."
+                        height="190rem"
+                      />
                     </div>
-                    <!-- carousel end -->
-  
-                    <div class="card-body">
-                      <h5 class="card-title">Discounts</h5>
-                      <p class="card-text">
-                        <i class="fa-solid fa-m"></i> Affordable Products that will touch Your life and Family.
-                      </p>
-                      <a
-                        href="#"
-                        class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold"
-                        >See more</a
-                      >
+                    <div class="carousel-item" data-bs-interval="6000">
+                      <img
+                        src="./assets/pictures/product images/discounts/discount(3).png"
+                        class="d-block w-100"
+                        alt="..."
+                        height="190rem"
+                      />
+                    </div>
+                    <div class="carousel-item" data-bs-interval="6000">
+                      <img
+                        src="./assets/pictures/product images/discounts/discount(1).png"
+                        class="d-block w-100"
+                        alt="..."
+                        height="190rem"
+                      />
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                      <img
+                        src="./assets/pictures/product images/discounts/discount(5).png"
+                        class="d-block w-100"
+                        alt="..."
+                        height="190rem"
+                      />
+                    </div>
+                    <div class="carousel-item" data-bs-interval="6000">
+                      <img
+                        src="./assets/pictures/product images/discounts/discount(2).png"
+                        class="d-block w-100"
+                        alt="..."
+                        height="190rem"
+                      />
                     </div>
                   </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#DscountCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#DscountCarousel"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
                 </div>
-            </ul>
+                <!-- carousel end -->
+
+                <div class="card-body">
+                  <h5 class="card-title">Discounts</h5>
+                  <p class="card-text">
+                    <i class="fa-solid fa-m"></i> Affordable Products that will
+                    touch Your life and Family.
+                  </p>
+                  <a
+                    href="#"
+                    class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold"
+                    >See more</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        
-        <!-- end offcanvas -->
-   
+        </ul>
+      </div>
+    </div>
 
-
+    <!-- end offcanvas -->
 
     <!-- offcanvas -->
     <div
-      class=" offcanvasMenu offcanvas offcanvas-top h-75  z-1 rounded-2 shadow-lg p-4 mb-4"
+      class="offcanvasMenu offcanvas offcanvas-top h-75 z-1 rounded-2 shadow-lg p-4 mb-4"
       tabindex="1"
       id="offcanvasTop"
       aria-labelledby="offcanvasTopLabel"
@@ -284,7 +527,6 @@
       </div>
 
       <div class="offcanvas-body overflow-y-hidden">
-
         <div class="row">
           <div class="col-10">
             <div class="row me-2">
@@ -293,49 +535,113 @@
                   class="card mt-3 mb-3 pb-2 shadow-lg border border-2 border-dark"
                   style="width: 20rem; height: 24rem"
                 >
-                <!-- carousel -->
+                  <!-- carousel -->
 
-                <div id="bestSellerCarousel" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#bestSellerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#bestSellerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#bestSellerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#bestSellerCarousel" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                  <div
+                    id="bestSellerCarousel"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#bestSellerCarousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#bestSellerCarousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#bestSellerCarousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#bestSellerCarousel"
+                        data-bs-slide-to="3"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="5000">
+                        <img
+                          src="./assets/pictures/product images/best seller 1.png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img
+                          src="./assets/pictures/product images/best seller 2.png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img
+                          src="./assets/pictures/product images/best seller 3.png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img
+                          src="./assets/pictures/product images/best seller 4.jpg"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#bestSellerCarousel"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#bestSellerCarousel"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
                   </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="5000">
-                      <img src="./assets/pictures/product images/best seller 1.png" class="d-block w-100" alt="..." height="190rem">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                      <img src="./assets/pictures/product images/best seller 2.png" class="d-block w-100" alt="..." height="190rem">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                      <img src="./assets/pictures/product images/best seller 3.png" class="d-block w-100" alt="..." height="190rem">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                      <img src="./assets/pictures/product images/best seller 4.jpg" class="d-block w-100" alt="..." height="190rem">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#bestSellerCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#bestSellerCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-                <!-- carousel end -->
-              
-                  
+                  <!-- carousel end -->
+
                   <div class="card-body">
-                    <h5 class="card-title text-center fw-bolder">Best Seller</h5>
+                    <h5 class="card-title text-center fw-bolder">
+                      Best Seller
+                    </h5>
                     <p class="card-text">
-                      <i class="fa-solid fa-m"></i> Best Selling Products which touch there life.
+                      <i class="fa-solid fa-m"></i> Best Selling Products which
+                      touch there life.
                     </p>
                     <a
                       href="#"
-                      class="btnDrpdown btn btn-info d-flex justify-content-center  text-light fw-bold"
+                      class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold"
                       >Check it
                     </a>
                   </div>
@@ -347,40 +653,94 @@
                   class="card mt-3 mb-3 pb-2 shadow-lg border border-2 border-dark"
                   style="width: 20rem; height: 24rem"
                 >
-                <!-- carousel -->
-                <div id="NewArrivalCarousel" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#NewArrivalCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#NewArrivalCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#NewArrivalCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <!-- carousel -->
+                  <div
+                    id="NewArrivalCarousel"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#NewArrivalCarousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#NewArrivalCarousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#NewArrivalCarousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="6000">
+                        <img
+                          src="./assets/pictures/hp1.png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img
+                          src="./assets/pictures/hp2.png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="6000">
+                        <img
+                          src="./assets/pictures/hp3.png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#NewArrivalCarousel"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#NewArrivalCarousel"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
                   </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="6000">
-                      <img src="./assets/pictures/hp1.png" class="d-block w-100" alt="..." height="190rem">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                      <img src="./assets/pictures/hp2.png" class="d-block w-100" alt="..." height="190rem">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="6000">
-                      <img src="./assets/pictures/hp3.png" class="d-block w-100" alt="..." height="190rem">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#NewArrivalCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#NewArrivalCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-                <!-- carousel end -->
+                  <!-- carousel end -->
 
-                  
                   <div class="card-body">
-                    <h5 class="card-title text-center fw-bolder">New-Arrival</h5>
+                    <h5 class="card-title text-center fw-bolder">
+                      New-Arrival
+                    </h5>
                     <p class="card-text">
-                      <i class="fa-solid fa-m"></i> New Arrival Products which can Touch your Life.
+                      <i class="fa-solid fa-m"></i> New Arrival Products which
+                      can Touch your Life.
                     </p>
                     <a
                       href="#"
@@ -395,40 +755,111 @@
                   class="card mt-3 mb-3 pb-2 shadow-lg border border-2 border-dark"
                   style="width: 20rem; height: 24rem"
                 >
-
                   <!-- carousel -->
 
-                  <div id="DscountCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div
+                    id="DscountCarousel"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                  >
                     <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#DscountCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#DscountCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#DscountCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                      <button type="button" data-bs-target="#DscountCarousel" data-bs-slide-to="3" aria-label="Slide 3"></button>
-                      <button type="button" data-bs-target="#DscountCarousel" data-bs-slide-to="4" aria-label="Slide 3"></button>
+                      <button
+                        type="button"
+                        data-bs-target="#DscountCarousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#DscountCarousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#DscountCarousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#DscountCarousel"
+                        data-bs-slide-to="3"
+                        aria-label="Slide 3"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#DscountCarousel"
+                        data-bs-slide-to="4"
+                        aria-label="Slide 3"
+                      ></button>
                     </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active" data-bs-interval="5000">
-                        <img src="./assets/pictures/product images/discounts/discount(4).png" class="d-block w-100" alt="..." height="190rem">
+                        <img
+                          src="./assets/pictures/product images/discounts/discount(4).png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
                       </div>
                       <div class="carousel-item" data-bs-interval="6000">
-                        <img src="./assets/pictures/product images/discounts/discount(3).png" class="d-block w-100" alt="..." height="190rem">
+                        <img
+                          src="./assets/pictures/product images/discounts/discount(3).png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
                       </div>
                       <div class="carousel-item" data-bs-interval="6000">
-                        <img src="./assets/pictures/product images/discounts/discount(1).png" class="d-block w-100" alt="..." height="190rem">
+                        <img
+                          src="./assets/pictures/product images/discounts/discount(1).png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
                       </div>
                       <div class="carousel-item" data-bs-interval="5000">
-                        <img src="./assets/pictures/product images/discounts/discount(5).png" class="d-block w-100" alt="..." height="190rem">
+                        <img
+                          src="./assets/pictures/product images/discounts/discount(5).png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
                       </div>
                       <div class="carousel-item" data-bs-interval="6000">
-                        <img src="./assets/pictures/product images/discounts/discount(2).png" class="d-block w-100" alt="..." height="190rem">
+                        <img
+                          src="./assets/pictures/product images/discounts/discount(2).png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
                       </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#DscountCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#DscountCarousel"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
                       <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#DscountCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#DscountCarousel"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
@@ -437,7 +868,8 @@
                   <div class="card-body">
                     <h5 class="card-title">Discounts</h5>
                     <p class="card-text">
-                      <i class="fa-solid fa-m"></i> Affordable Products that will touch Your life and Family.
+                      <i class="fa-solid fa-m"></i> Affordable Products that
+                      will touch Your life and Family.
                     </p>
                     <a
                       href="#"
@@ -503,7 +935,7 @@
         </div>
       </div>
     </div>
-   
+
     <header>
       <div class="header-top">
         <nav class="navbar navbar-expand-lg bg-info fixed-top">
@@ -511,7 +943,6 @@
             <a href="#" class="navbar-brand">
               <i class="fa-duotone fa-m fw-bolder fs-3"></i
               ><span class="fw-bolder text-secondary">S-OnlineShop</span>
-              
             </a>
             <!-- toggle for responsive button -->
             <button
@@ -522,9 +953,8 @@
               aria-expanded="false"
               aria-label="Toggle-navigation"
             >
-            <i class="fa-solid fa-bars-staggered"></i>
+              <i class="fa-solid fa-bars-staggered"></i>
             </button>
-
 
             <div class="collapse navbar-collapse" id="MyNvbarContent">
               <!-- navcontent -->
@@ -570,29 +1000,42 @@
     <main>
       <!-- heroImage -->
       <div class="hero-image">
-        <video class="video-bg" autoplay muted loop src="./assets/video/herovideobg.mp4"></video>
+        <video
+          class="video-bg"
+          autoplay
+          muted
+          loop
+          src="./assets/video/herovideobg.mp4"
+        ></video>
         <div class="hero-text">
           <h1 class="fs-1 text-light">
             <strong>Your Choice is My Care!</strong>
           </h1>
-           
+
           <p class="fw-bold fs-4 text-light mb-5">
             “The best foundation you can wear is glowing healthy skin.”
           </p>
 
-          <button type="button" 
-          class="btn btn-primary bg-transparent fw-bolder fs-1 border-3 border">
-          <a href="#" class="text-decoration-none text-info"> 
-            <!-- <i class="fa-solid fa-m"></i>-Shop -->
-            <img src="./assets/pictures/MS-ONLINESHOP_free-file (2).png" alt="">
-          </a>
+          <button
+            type="button"
+            class="btn btn-primary bg-transparent fw-bolder fs-1 border-3 border"
+          >
+            <a href="#" class="text-decoration-none text-info">
+              <!-- <i class="fa-solid fa-m"></i>-Shop -->
+              <img
+                src="./assets/pictures/MS-ONLINESHOP_free-file (2).png"
+                alt=""
+              />
+            </a>
           </button>
         </div>
       </div>
 
       <!-- Section -->
       <section>
-        <h1 class="text-center fs-1 fw-bolder Ptitle fw-bolder"><i class="fa-solid fa-m"></i> Products</h1>
+        <h1 class="text-center fs-1 fw-bolder Ptitle fw-bolder">
+          <i class="fa-solid fa-m"></i> Products
+        </h1>
         <!-- Carousel -->
         <div id="HeaderProd" class="carousel slide" data-bs-ride="true">
           <!-- Indicators/dots -->
@@ -636,13 +1079,11 @@
                   >
                     <img
                       src="./assets/pictures/MS-ONLINESHOP_free-file (2).png"
-                      class="card-img-top h-50 px-2 "
+                      class="card-img-top h-50 px-2"
                       alt="logo"
                     />
                     <div class="card-body">
-                      <h5 class="card-title text-center">
-                        Skin-Care
-                      </h5>
+                      <h5 class="card-title text-center">Skin-Care</h5>
                       <p class="card-text">
                         Lorem ipsum dolor sit, amet consectetur adipisicing
                         elit. Eum, nemo!
