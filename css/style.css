@@ -63,3 +63,7 @@ z-index: -1;
   .offcanvasMenu, .homeCard{
     background-color: #c2ecff;
   }
+  
+  .bgpacks{
+    background-image: linear-gradient(95deg, #99b2dd, #9dfff9, #d574f0);
+  }
