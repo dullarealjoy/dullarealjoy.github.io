@@ -99,7 +99,8 @@ body {
 }
 
 .PtitleVs,
-.pparV {
+.pparV,
+.contactUs {
   font-size: 60px;
   background: -webkit-linear-gradient(#99b2dd, #9dfff9, #d664f5);
   -webkit-background-clip: text;
