@@ -1,78 +1,107 @@
-*{
- padding: 0;
- margin: 0;
- box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.navbg, .bodybg2{
-    background-color: #1ebff0;
+.navbg,
+.bodybg2 {
+  background-color: #1ebff0;
 }
-.body-bg{
-    background-color: #686464;
-}
-
-.txtColor{
-    color: #1ebff0;
-}
-.btnBgcolor{
- background-color: #B6DD1A;
+.body-bg {
+  background-color: #686464;
 }
 
-.txtcolor2{
- color: #686464;
+.txtColor {
+  color: #1ebff0;
+}
+.btnBgcolor {
+  background-color: #b6dd1a;
 }
 
-.InputF{
-   background-color: #D9D9D9; 
+.txtcolor2 {
+  color: #686464;
 }
 
+.InputF {
+  background-color: #d9d9d9;
+}
 
 /* main style */
 
-.hero-image{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   background: rgba(0, 0, 0, 0.5);
-   color: white;
-   position: relative;
-   overflow: hidden;
-   min-height: 90vh;
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  min-height: 90vh;
+}
+.video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
 
-.video-bg{
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-min-width: 100%;
-min-height: 100%;
-z-index: -1;
+.video-Vbg {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.ValVid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  min-height: 10%;
 }
 
-  body{
-    background-color: #434a82;
-    
-  }
+body {
+  background-color: #434a82;
+}
+.GpTitle {
+  color: #434a82;
+}
 
-  .btnDrpdown{
-    background-color: #0e9adc;
-  }
+.btnDrpdown {
+  background-color: #0e9adc;
+}
 
-  .offcanvasMenu, .homeCard{
-    background-color: #c2ecff;
-  }
-  
-  .bgpacks{
-    background-image: linear-gradient(95deg, #99b2dd, #9dfff9, #d664f5);
-  }
+.offcanvasMenu,
+.homeCard {
+  background-color: #c2ecff;
+}
 
-  .Ptitle{
-    /* color: #d664f5; */
-    font-size: 72px;
-  background: -webkit-linear-gradient( #99b2dd, #9dfff9, #d664f5);
+.bgpacks,
+.btnPbtn {
+  background-image: linear-gradient(95deg, #99b2dd, #9dfff9, #d664f5);
+}
+
+.Ptitle {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#99b2dd, #9dfff9, #d664f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  }
+}
 
+.PtitleVs,
+.pparV {
+  font-size: 60px;
+  background: -webkit-linear-gradient(#99b2dd, #9dfff9, #d664f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
