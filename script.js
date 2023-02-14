@@ -1,4 +1,6 @@
 function password_show_hide() {
+    const passkey = "Admin";
+    const user = "user";
     var passContent = document.getElementById("password");
     var showEye = document.getElementById("show_eye");
     var hideEye = document.getElementById("hide_eye");

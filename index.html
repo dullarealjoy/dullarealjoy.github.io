@@ -25,90 +25,119 @@
   </head>
 
   <body>
-      <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5 z-2" id="staticBackdropLabel">MemberShip</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <!-- <div class="row">
-          <div class="col-6"> -->
-            <!-- <div class="card">
-              <div class="card-body">
-                <div class="mb-3">
-                  <label for="members" class="form-label">Email address/Username</label>
-                  <input type="email" class="form-control" id="members" placeholder="name@example.com">
-                </div>
-                <div class="mb-3">
-                  <label for="memberspass" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="memberspass">
-                </div>
-                <div>
-                  <button type="submit" class="btn btn-primary mb-3 ms-2">Sign in</button>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <form action="" method="post" id="login" autocomplete="off" class="border p-3">
-            <div class="form-row">
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 z-2" id="staticBackdropLabel">
+              MemberShip
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form
+              action=""
+              method="post"
+              id="login"
+              autocomplete="off"
+              class="border p-3"
+            >
+              <div class="form-row">
                 <!-- <h4 class="title my-3">Login For Access</h4> -->
                 <div class="col-12">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-user pt-2"></i></span>
-                        </div>
-                        <input name="username" type="text" value="" class="input form-control" id="username"
-                            placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1"
+                        ><i class="fas fa-user pt-2"></i
+                      ></span>
                     </div>
+                    <input
+                      name="username"
+                      type="text"
+                      value=""
+                      class="input form-control"
+                      id="username"
+                      placeholder="Username"
+                      aria-label="Username"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
                 </div>
                 <div class="col-12">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock pt-2"></i></span>
-                        </div>
-                        <input name="password" type="password" value="" class="input form-control" id="password"
-                            placeholder="password" required="true" aria-label="password"
-                            aria-describedby="basic-addon1" />
-                        <div class="input-group-append">
-                            <span class="input-group-text" onclick="password_show_hide();">
-                                <i class="fas fa-eye pt-2" id="show_eye"></i>
-                                <i class="fas fa-eye-slash d-none pt-2" id="hide_eye"></i>
-                            </span>
-                        </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1"
+                        ><i class="fas fa-lock pt-2"></i
+                      ></span>
                     </div>
+                    <input
+                      name="password"
+                      type="password"
+                      value=""
+                      class="input form-control"
+                      id="password"
+                      placeholder="password"
+                      required="true"
+                      aria-label="password"
+                      aria-describedby="basic-addon1"
+                    />
+                    <div class="input-group-append">
+                      <span
+                        class="input-group-text"
+                        onclick="password_show_hide();"
+                      >
+                        <i class="fas fa-eye pt-2" id="show_eye"></i>
+                        <i
+                          class="fas fa-eye-slash d-none pt-2"
+                          id="hide_eye"
+                        ></i>
+                      </span>
+                    </div>
+                  </div>
                 </div>
                 <div class="col-6">
-                    <div class="form-group form-check text-left">
-                        <input type="checkbox" name="remember" class="form-check-input" id="remember_me" />
-                        <label class="form-check-label" for="remember_me">Remember me</label>
-                    </div>
+                  <div class="form-group form-check text-left">
+                    <input
+                      type="checkbox"
+                      name="remember"
+                      class="form-check-input"
+                      id="remember_me"
+                    />
+                    <label class="form-check-label" for="remember_me"
+                      >Remember me</label
+                    >
+                  </div>
                 </div>
                 <div class="col-sm-12 pt-3 text-right">
-                    <p>New Customer? <a href="#">Register</a></p>
+                  <p>
+                    New Customer? <a href="./submembership.html">Register</a>
+                  </p>
                 </div>
                 <div class="col-12">
-                    <button class="btn btn-primary" type="submit" name="signin">Login</button>
+                  <button class="btn btn-primary" type="submit" name="">
+                    Login
+                  </button>
                 </div>
-            </div>
-        </form>
-    </div>
-</div>
-</div>
-
-
-
-          <!-- <div class="col-6">
-
-          </div> -->
-        <!-- </div> -->
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
     <!-- offcanvas -->
 
@@ -581,7 +610,7 @@
 
     <!-- offcanvas -->
     <div
-      class="offcanvasMenu offcanvas offcanvas-top h-75  rounded-2 shadow-lg p-4 mb-4 z-1"
+      class="offcanvasMenu offcanvas offcanvas-top h-75 rounded-2 shadow-lg p-4 mb-4 z-1"
       tabindex="-1"
       id="offcanvasTop"
       aria-labelledby="offcanvasTopLabel"
@@ -991,7 +1020,7 @@
         </div>
       </div>
     </div>
-
+    <!-- end offcanvas -->
     <header>
       <div class="header-top">
         <nav class="navbar navbar-expand-lg bg-info fixed-top z-1">
@@ -1035,13 +1064,19 @@
                   >
                 </li>
                 <li class="nav-item me-5">
-                  <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  target="_self" class="nav-link">
+                  <a
+                    href="#"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                    target="_self"
+                    class="nav-link"
+                  >
                     <i class="fa-solid fa-address-card"></i>
                     <i class="fa-duotone fa-m fw-bolder"></i>emberShip</a
-                  > 
-               
+                  >
                 </li>
-              
+
                 <li class="nav-item me-2 border-start border-3 border-dark">
                   <a href="#" class="nav-link">
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -1556,7 +1591,9 @@
                         >
                           <div class="card-body">
                             <div class="card-title">
-                              <h3 class="text-light fw-bold fs-3">CONTACT INFORMATION</h3>
+                              <h3 class="text-light fw-bold fs-3">
+                                CONTACT INFORMATION
+                              </h3>
                             </div>
                             <p class="fs-5 text-light">
                               <i
@@ -1625,7 +1662,9 @@
                             </p>
 
                             <p class="fw-bold text-light">
-                              <i class="fa-solid fa-phone-volume pe-2 text-info"></i
+                              <i
+                                class="fa-solid fa-phone-volume pe-2 text-info"
+                              ></i
                               >+639012345678
                             </p>
 
@@ -1633,7 +1672,7 @@
                               <h4 class="card-title ms-2 pb-5 mb-3 text-light">
                                 Follow <span class="text-info">Us</span>
                               </h4>
-                              <div class="card-body pb-3 mb-4 ">
+                              <div class="card-body pb-3 mb-4">
                                 <a type="button" href="#"
                                   ><i
                                     class="fa-brands fa-facebook fs-2 text-info"
@@ -1663,7 +1702,9 @@
                             <form>
                               <div class="row">
                                 <div class="col-4 me-4 text-end">
-                                  <label for="CustomerName" class="fs-5 fw-bold text-light"
+                                  <label
+                                    for="CustomerName"
+                                    class="fs-5 fw-bold text-light"
                                     >Name:</label
                                   >
                                 </div>
@@ -1757,7 +1798,9 @@
     </main>
     <!-- ContactUS -->
     <footer>
-      <div class="container-fluid position-relative border-top border-4 footerdevprofile">
+      <div
+        class="container-fluid position-relative border-top border-4 footerdevprofile"
+      >
         <img
           src="./assets/pictures/headlogo.png"
           class="position-absolute top-0 end-0 pb-3 pt-2 opacity-50"
