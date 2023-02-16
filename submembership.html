@@ -23,6 +23,120 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+      <!-- Modal -->
+      <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 z-2" id="staticBackdropLabel">
+              MemberShip
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form
+              action=""
+              method="post"
+              id="login"
+              autocomplete="off"
+              class="border p-3"
+            >
+              <div class="form-row">
+                <!-- <h4 class="title my-3">Login For Access</h4> -->
+                <div class="col-12">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1"
+                        ><i class="fas fa-user pt-2"></i
+                      ></span>
+                    </div>
+                    <input
+                      name="username"
+                      type="text"
+                      value=""
+                      class="input form-control"
+                      id="username"
+                      placeholder="Username"
+                      aria-label="Username"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1"
+                        ><i class="fas fa-lock pt-2"></i
+                      ></span>
+                    </div>
+                    <input
+                      name="password"
+                      type="password"
+                      value=""
+                      class="input form-control"
+                      id="password"
+                      placeholder="password"
+                      required="true"
+                      aria-label="password"
+                      aria-describedby="basic-addon1"
+                    />
+                    <div class="input-group-append">
+                      <span
+                        class="input-group-text"
+                        onclick="password_show_hide();"
+                      >
+                        <i class="fas fa-eye pt-2" id="show_eye"></i>
+                        <i
+                          class="fas fa-eye-slash d-none pt-2"
+                          id="hide_eye"
+                        ></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group form-check text-left">
+                    <input
+                      type="checkbox"
+                      name="remember"
+                      class="form-check-input"
+                      id="remember_me"
+                    />
+                    <label class="form-check-label" for="remember_me"
+                      >Remember me</label
+                    >
+                  </div>
+                </div>
+                <div class="col-sm-12 pt-3 text-right">
+                  <p>
+                    New Customer? <a href="./submembership.html">Register</a>
+                  </p>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit" name="">
+                    Login
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- offcanvas -->
     <div
       class="offcanvasMenu offcanvas offcanvas-top h-75 rounded-2 shadow-lg p-4 mb-4 z-1"
@@ -398,7 +512,7 @@
           <div class="col-2 border-2 border-start border-secondary">
             <ul class="navbar-nav ms-auto d-flex">
               <li>
-                <a href="#" class="dropdown-item fw-bolder mt-5">
+                <a href="./msShop.html" class="dropdown-item fw-bolder mt-5">
                   <i class="fa-brands fa-product-hunt"></i>
                   MS- <span>Products</span>
                 </a>
@@ -473,14 +587,14 @@
                 </li>
 
                 <li class="nav-item me-3">
-                  <a href="#" class="nav-link">
+                  <a href="./index.html#msTalks" class="nav-link">
                     <i class="fa-solid fa-circle-info"></i>
                     <i class="fa-duotone fa-m fw-bolder"></i>s-Talks</a
                   >
                 </li>
                 <li class="nav-item me-5">
                   <a
-                    href="#"
+                    href="./index.html"
                     type="button"
                     data-bs-toggle="modal"
                     data-bs-target="#staticBackdrop"
@@ -505,15 +619,17 @@
       </div>
     </header>
     <main>
+      <h1 class="text-center align-middle mt-5 pt-5 fs-1 fw-bolder text-white">
+        New User
+      </h1>
+      <img
+      src="./assets/pictures/MS-ONLINESHOP_free-file (2).png"
+      class="d-block mx-auto"
+      alt="logo"
+    />
       <div class="hero">
-        <h1 class="text-center align-middle mt-5 pt-5 fs-1 fw-bolder">
-          New User
-        </h1>
-        <img
-          src="./assets/pictures/MS-ONLINESHOP_free-file (2).png"
-          class="d-block mx-auto"
-          alt="logo"
-        />
+    
+       
         <div class="row container mx-auto">
           <div class="col-12 mt-3 bg-secondary rounded-3 shadow-lg">
             <div class="row mx-auto">
@@ -522,7 +638,7 @@
                   <label for="inputEmail" class="form-label fs-3 fw-bold"
                     >Email</label
                   >
-                  <small class="position-absolute end-0 mt-4">REQUIRED</small>
+                  <small class="position-absolute end-0 mt-4 text-warning">REQUIRED</small>
                 </div>
 
                 <input
@@ -538,7 +654,7 @@
                   <label for="inputUsername" class="form-label fs-3 fw-bold"
                     >UserName</label
                   >
-                  <small class="position-absolute end-0 mt-4">REQUIRED</small>
+                  <small class="position-absolute end-0 mt-4 text-warning">REQUIRED</small>
                 </div>
 
                 <input
@@ -556,19 +672,17 @@
                 <label for="inputVpassword" class="form-label fs-3 fw-bold"
                   >Password</label
                 >
-                <small class="position-absolute end-0 mt-4">REQUIRED</small>
+                <small class="position-absolute end-50 pe-3 mt-4 text-warning">REQUIRED</small>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
-                    <!-- <span class="input-group-text" id="basic-addon1"
-                    ><i class="fas fa-lock pt-2"></i
-                  ></span> -->
+                  
                   </div>
                   <input
                     name="password"
                     type="password"
                     value=""
                     class="input form-control"
-                    id="password"
+                    id="password1"
                     placeholder="password"
                     required="true"
                     aria-label="password"
@@ -577,32 +691,30 @@
                   <div class="input-group-append">
                     <span
                       class="input-group-text"
-                      onclick="password_show_hide();"
+                      onclick="password_show_hide1();"
                     >
-                      <i class="fas fa-eye pt-2" id="show_eye"></i>
-                      <i class="fas fa-eye-slash d-none pt-2" id="hide_eye"></i>
+                      <i class="fas fa-eye pt-2 mb-1" id="show_eye1"></i>
+                      <i class="fas fa-eye-slash d-none pt-2 mb-1" id="hide_eye1"></i>
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div class="col-6">
+              <div class="col-6 position-relative">
                 <label for="inputVpassword" class="form-label fs-3 fw-bold"
                   >Verified Password</label
                 >
-                <small class="position-absolute end-0 mt-4">REQUIRED</small>
+                <small class="position-absolute mt-4 end-0 me-2 text-warning">REQUIRED</small>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
-                    <!-- <span class="input-group-text" id="basic-addon1"
-                    ><i class="fas fa-lock pt-2"></i
-                  ></span> -->
+      
                   </div>
                   <input
                     name="password"
                     type="password"
                     value=""
                     class="input form-control"
-                    id="password"
+                    id="password2"
                     placeholder="password"
                     required="true"
                     aria-label="password"
@@ -611,10 +723,10 @@
                   <div class="input-group-append">
                     <span
                       class="input-group-text"
-                      onclick="password_show_hide();"
+                      onclick="password_show_hide2();"
                     >
-                      <i class="fas fa-eye pt-2" id="show_eye"></i>
-                      <i class="fas fa-eye-slash d-none pt-2" id="hide_eye"></i>
+                      <i class="fas fa-eye pt-2 mb-1" id="show_eye2"></i>
+                      <i class="fas fa-eye-slash d-none pt-2 mb-1" id="hide_eye2"></i>
                     </span>
                   </div>
                 </div>
@@ -627,7 +739,7 @@
                   <label for="inputfname" class="form-label fs-3 fw-bold"
                     >First Name</label
                   >
-                  <small class="position-absolute end-0 mt-4">REQUIRED</small>
+                  <small class="position-absolute end-0 mt-4 text-warning">REQUIRED</small>
                 </div>
                 <input
                   type="text"
@@ -643,7 +755,7 @@
                   <label for="inputLastname" class="form-label fs-3 fw-bold"
                     >Last Name</label
                   >
-                  <small class="position-absolute end-0 mt-4">REQUIRED</small>
+                  <small class="position-absolute end-0 mt-4 text-warning">REQUIRED</small>
                 </div>
 
                 <input
@@ -662,7 +774,7 @@
                   <label for="inputadd1" class="form-label fs-3 fw-bold"
                     >Address1</label
                   >
-                  <small class="position-absolute end-0 mt-4">REQUIRED</small>
+                  <small class="position-absolute end-0 mt-4 text-warning">REQUIRED</small>
                 </div>
                 <input
                   type="text"
@@ -678,7 +790,7 @@
                   <label for="inputLastname" class="form-label fs-3 fw-bold"
                     >Address2</label
                   >
-                  <small class="position-absolute end-0 mt-4">REQUIRED</small>
+                  <small class="position-absolute end-0 mt-4 text-warning">REQUIRED</small>
                 </div>
 
                 <input
@@ -697,7 +809,7 @@
                   <label for="inputProvince" class="form-label fs-3 fw-bold"
                     >State/Province</label
                   >
-                  <small class="position-absolute end-0 mt-4">REQUIRED</small>
+                  <small class="position-absolute end-0 mt-4 text-warning">REQUIRED</small>
                 </div>
                 <input
                   type="text"
@@ -713,7 +825,7 @@
                   <label for="inputLastname" class="form-label fs-3 fw-bold"
                     >Region</label
                   >
-                  <small class="position-absolute end-0 mt-4">REQUIRED</small>
+                  <small class="position-absolute end-0 mt-4 text-warning">REQUIRED</small>
                 </div>
                 <select id="inputState" class="form-select" required>
                   <option selected>Choose..</option>
@@ -743,7 +855,7 @@
                   <label for="inputZip" class="form-label fs-3 fw-bold"
                     >Zip Code</label
                   >
-                  <small class="position-absolute end-0 mt-4">REQUIRED</small>
+                  <small class="position-absolute end-0 mt-4 text-warning">REQUIRED</small>
                 </div>
                 <input
                   type="number"
@@ -759,7 +871,7 @@
                   <label for="inputLastname" class="form-label fs-3 fw-bold"
                     >Phone No.</label
                   >
-                  <small class="position-absolute end-0 mt-4">REQUIRED</small>
+                  <small class="position-absolute end-0 mt-4 text-warning">REQUIRED</small>
                 </div>
 
                 <input

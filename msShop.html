@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSshop</title>
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Fontawesome icon -->
+    <script
+      src="https://kit.fontawesome.com/b2e3f012e9.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- css-connection -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 z-2" id="staticBackdropLabel">
+              MemberShip
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form
+              action=""
+              method="post"
+              id="login"
+              autocomplete="off"
+              class="border p-3"
+            >
+              <div class="form-row">
+                <!-- <h4 class="title my-3">Login For Access</h4> -->
+                <div class="col-12">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1"
+                        ><i class="fas fa-user pt-2"></i
+                      ></span>
+                    </div>
+                    <input
+                      name="username"
+                      type="text"
+                      value=""
+                      class="input form-control"
+                      id="username"
+                      placeholder="Username"
+                      aria-label="Username"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1"
+                        ><i class="fas fa-lock pt-2"></i
+                      ></span>
+                    </div>
+                    <input
+                      name="password"
+                      type="password"
+                      value=""
+                      class="input form-control"
+                      id="password"
+                      placeholder="password"
+                      required="true"
+                      aria-label="password"
+                      aria-describedby="basic-addon1"
+                    />
+                    <div class="input-group-append">
+                      <span
+                        class="input-group-text"
+                        onclick="password_show_hide();"
+                      >
+                        <i class="fas fa-eye pt-2" id="show_eye"></i>
+                        <i
+                          class="fas fa-eye-slash d-none pt-2"
+                          id="hide_eye"
+                        ></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group form-check text-left">
+                    <input
+                      type="checkbox"
+                      name="remember"
+                      class="form-check-input"
+                      id="remember_me"
+                    />
+                    <label class="form-check-label" for="remember_me"
+                      >Remember me</label
+                    >
+                  </div>
+                </div>
+                <div class="col-sm-12 pt-3 text-right">
+                  <p>
+                    New Customer? <a href="./submembership.html">Register</a>
+                  </p>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit" name="">
+                    Login
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- offcanvas -->
+    <div
+      class="offcanvasMenu offcanvas offcanvas-top h-75 rounded-2 shadow-lg p-4 mb-4 z-1"
+      tabindex="-1"
+      id="offcanvasTop"
+      aria-labelledby="offcanvasTopLabel"
+      data-bs-backdrop="false"
+    >
+      <div class="offcanvas-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body overflow-y-hidden">
+        <div class="row">
+          <div class="col-10">
+            <div class="row me-2">
+              <div class="col-4 ps-3">
+                <div
+                  class="card mt-3 mb-3 pb-2 shadow-lg bg-transparent"
+                  style="width: 20rem; height: 24rem"
+                >
+                  <!-- carousel -->
+
+                  <div
+                    id="bestSellerCarousel"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#bestSellerCarousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#bestSellerCarousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#bestSellerCarousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#bestSellerCarousel"
+                        data-bs-slide-to="3"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="5000">
+                        <img
+                          src="./assets/pictures/product images/best seller 1.png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img
+                          src="./assets/pictures/product images/best seller 2.png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img
+                          src="./assets/pictures/product images/best seller 3.png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img
+                          src="./assets/pictures/product images/best seller 4.jpg"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#bestSellerCarousel"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#bestSellerCarousel"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <!-- carousel end -->
+
+                  <div class="card-body">
+                    <h5 class="card-title text-center fw-bolder">
+                      Best Seller
+                    </h5>
+                    <p class="card-text text-center">
+                      <i class="fa-solid fa-m"></i> Best Selling Products which
+                      touch there life.
+                    </p>
+                    <a
+                      href="#"
+                      class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold"
+                      >Check it
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div
+                  class="card mt-3 mb-3 pb-2 shadow-lg bg-transparent"
+                  style="width: 20rem; height: 24rem"
+                >
+                  <!-- carousel -->
+                  <div
+                    id="NewArrivalCarousel"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#NewArrivalCarousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#NewArrivalCarousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#NewArrivalCarousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="6000">
+                        <img
+                          src="./assets/pictures/hp1.png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img
+                          src="./assets/pictures/hp2.png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="6000">
+                        <img
+                          src="./assets/pictures/hp3.png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#NewArrivalCarousel"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#NewArrivalCarousel"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <!-- carousel end -->
+
+                  <div class="card-body">
+                    <h5 class="card-title text-center fw-bolder">
+                      New-Arrival
+                    </h5>
+                    <p class="card-text text-center">
+                      <i class="fa-solid fa-m"></i> New Arrival Products which
+                      can Touch your Life.
+                    </p>
+                    <a
+                      href="#"
+                      class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold"
+                      >See More</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div
+                  class="card mt-3 mb-3 pb-2 shadow-lg bg-transparent"
+                  style="width: 20rem; height: 24rem"
+                >
+                  <!-- carousel -->
+
+                  <div
+                    id="DscountCarousel"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#DscountCarousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#DscountCarousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#DscountCarousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#DscountCarousel"
+                        data-bs-slide-to="3"
+                        aria-label="Slide 3"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#DscountCarousel"
+                        data-bs-slide-to="4"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="5000">
+                        <img
+                          src="./assets/pictures/product images/discounts/discount(4).png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="6000">
+                        <img
+                          src="./assets/pictures/product images/discounts/discount(3).png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="6000">
+                        <img
+                          src="./assets/pictures/product images/discounts/discount(1).png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img
+                          src="./assets/pictures/product images/discounts/discount(5).png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="6000">
+                        <img
+                          src="./assets/pictures/product images/discounts/discount(2).png"
+                          class="d-block w-100"
+                          alt="..."
+                          height="190rem"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#DscountCarousel"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#DscountCarousel"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <!-- carousel end -->
+
+                  <div class="card-body">
+                    <h5 class="card-title text-center fw-bolder">Discounts</h5>
+                    <p class="card-text text-center">
+                      <i class="fa-solid fa-m"></i> Affordable Products that
+                      will touch Your life and Family.
+                    </p>
+                    <a
+                      href="#"
+                      class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold"
+                      >See more</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2 border-2 border-start border-secondary">
+            <ul class="navbar-nav ms-auto d-flex">
+              <li>
+                <a href="#" class="dropdown-item fw-bolder mt-5">
+                  <i class="fa-brands fa-product-hunt"></i>
+                  MS- <span>Products</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown-item fw-bolder mt-2">
+                  <i class="fa-solid fa-gifts"> </i> MS-<span>Giftpacks</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown-item fw-bolder mt-2">
+                  <i class="fa-solid fa-hand-holding-hand"></i>
+                  MS-<span>kinCare</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown-item fw-bolder mt-2">
+                  <i class="fa-solid fa-hands-holding-child"></i>
+                  MS-<span>Infant-Care</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown-item fw-bolder mt-2">
+                  <i class="fa-solid fa-suitcase-medical"></i>
+                  MS-<span>Health-<span>S</span>-Wealth</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end off canvas -->
+
+    <!-- *********************************************************************************** -->
+
+    <div class="row">
+      <header>
+        <div class="col-12">
+          <div class="header-top">
+            <nav class="navbar navbar-expand-lg bg-info z-1 sticky-top">
+              <div class="container-fluid">
+                <a href="./index.html" class="navbar-brand">
+                  <i class="fa-duotone fa-m fw-bolder fs-3"></i
+                  ><span class="fw-bolder text-secondary">S-OnlineShop</span>
+                </a>
+                <!-- toggle for responsive button -->
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#offcanvasWithBothOptions"
+                  aria-expanded="false"
+                  aria-label="Toggle-navigation"
+                >
+                  <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="MyNvbarContent">
+                  <!-- navcontent -->
+                  <ul class="navbar-nav ms-auto d-flex fw-bolder">
+                    <!--dropdown-Product  -->
+                    <li class="nav-item dropdown">
+                      <a
+                        href="#"
+                        class="nav-link dropdown-toggle me-3 overflow-y-hidden disabled"
+                        role="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasTop"
+                      >
+                        <i class="fa-solid fa-store"></i>M<span>Store</span>
+                      </a>
+                    </li>
+
+                    <li class="nav-item me-3">
+                      <a href="./index.html#msTalks" class="nav-link">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <i class="fa-duotone fa-m fw-bolder"></i>s-Talks</a
+                      >
+                    </li>
+                    <li class="nav-item me-5">
+                      <a
+                        href="./index.html"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"
+                        target="_self"
+                        class="nav-link"
+                      >
+                        <i class="fa-solid fa-address-card"></i>
+                        <i class="fa-duotone fa-m fw-bolder"></i>emberShip</a
+                      >
+                    </li>
+
+                    <li class="nav-item me-2 border-start border-3 border-dark">
+                      <a href="#" class="nav-link">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="fa-duotone fa-m fw-bolder"></i>-Cart</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="col-12">
+          <nav
+            class="navbar navbar-expand-lg navbar-light bg-light sticky-top opacity-50"
+          >
+            <div class="container-fluid">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              ></button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 g-5">
+                  
+                  <li>
+                    <a href="#" class="dropdown-item fw-bolder mt-2 pe-5">
+                      <i class="fa-solid fa-hand-holding-hand"></i>
+                      MS-<span>kinCare</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="dropdown-item fw-bolder mt-2 pe-5">
+                      <i class="fa-solid fa-hands-holding-child"></i>
+                      MS-<span>Infant-Care</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="dropdown-item fw-bolder mt-2 pe-5">
+                      <i class="fa-solid fa-suitcase-medical"></i>
+                      MS-<span>Health-<span>S</span>-Wealth</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="dropdown-item fw-bolder mt-2">
+                      <i class="fa-solid fa-gifts"> </i> MS-<span
+                        >Giftpacks</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="row">
+          <h3 class="mt-4 text-center text-white"> <i class="fa-solid fa-receipt"></i>
+            MS-<span>Promo</span></h3>
+          <div class="col-3">
+            <div
+              class="card mt-3 mb-4 ms-4 shadow-lg"
+              style="width: 20rem; height: 33rem"
+            >
+              <img
+                src="./assets/pictures/product images/discounts/discount(1).png"
+                class="card-img-top img-fluid"
+                alt="logo"
+              />
+
+              <div class="card-body">
+                <h5
+                  class="card-title text-center bg-danger text-light rounded-bottom-3"
+                >
+                PROMO
+                </h5>
+                <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                <p class="card-text">
+                  <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary d-flex justify-content-center"
+                  >BUY NOW</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div
+              class="card mt-3 mb-4 ms-4 shadow-lg"
+              style="width: 20rem; height: 33rem"
+            >
+              <img
+                src="./assets/pictures/product images/discounts/discount(2).png"
+                class="card-img-top img-fluid"
+                alt="logo"
+              />
+
+              <div class="card-body">
+                <h5
+                  class="card-title text-center bg-danger text-light rounded-bottom-3"
+                >
+                PROMO
+                </h5>
+                <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                <p class="card-text">
+                  <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary d-flex justify-content-center"
+                  >BUY NOW</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div
+              class="card mt-3 mb-4 ms-4 shadow-lg"
+              style="width: 20rem; height: 33rem"
+            >
+              <img
+                src="./assets/pictures/product images/discounts/discount(3).png"
+                class="card-img-top img-fluid"
+                alt="logo"
+              />
+
+              <div class="card-body">
+                <h5
+                  class="card-title text-center bg-danger text-light rounded-bottom-3"
+                >
+                  Gift Packed 1
+                </h5>
+                <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                <p class="card-text">
+                  <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary d-flex justify-content-center"
+                  >BUY NOW</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div
+              class="card mt-3 mb-4 ms-4 shadow-lg"
+              style="width: 20rem; height: 33rem"
+            >
+              <img
+                src="./assets/pictures/product images/discounts/discount(4).png"
+                class="card-img-top img-fluid"
+                alt="logo"
+              />
+
+              <div class="card-body">
+                <h5
+                  class="card-title text-center bg-danger text-light rounded-bottom-3"
+                >
+                  Gift Packed 1
+                </h5>
+                <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                <p class="card-text">
+                  <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary d-flex justify-content-center"
+                  >BUY NOW</a
+                >
+              </div>
+            </div>
+          </div>
+      
+
+          <div class="row">
+            <h3 class="mt-4 text-center text-white"> <i class="fa-regular fa-heart"></i>
+              MS-<span>Valentines</span></h3>
+            <div class="col-3">
+              <div
+                class="card mt-3 mb-4 ms-4 shadow-lg"
+                style="width: 20rem; height: 33rem"
+              >
+                <img
+                  src="./assets/pictures/giftpacks/giftpacks1.png"
+                  class="card-img-top img-fluid"
+                  alt="logo"
+                />
+  
+                <div class="card-body">
+                  <h5
+                    class="card-title text-center bg-danger text-light rounded-bottom-3"
+                  >
+                    Gift Packed 1
+                  </h5>
+                  <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                  <p class="card-text">
+                    <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    >BUY NOW</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                class="card mt-3 mb-4 ms-4 shadow-lg"
+                style="width: 20rem; height: 33rem"
+              >
+                <img
+                  src="./assets/pictures/giftpacks/giftpacks1.png"
+                  class="card-img-top img-fluid"
+                  alt="logo"
+                />
+  
+                <div class="card-body">
+                  <h5
+                    class="card-title text-center bg-danger text-light rounded-bottom-3"
+                  >
+                    Gift Packed 1
+                  </h5>
+                  <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                  <p class="card-text">
+                    <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    >BUY NOW</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                class="card mt-3 mb-4 ms-4 shadow-lg"
+                style="width: 20rem; height: 33rem"
+              >
+                <img
+                  src="./assets/pictures/giftpacks/giftpacks1.png"
+                  class="card-img-top img-fluid"
+                  alt="logo"
+                />
+  
+                <div class="card-body">
+                  <h5
+                    class="card-title text-center bg-danger text-light rounded-bottom-3"
+                  >
+                    Gift Packed 1
+                  </h5>
+                  <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                  <p class="card-text">
+                    <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    >BUY NOW</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                class="card mt-3 mb-4 ms-4 shadow-lg"
+                style="width: 20rem; height: 33rem"
+              >
+                <img
+                  src="./assets/pictures/giftpacks/giftpacks1.png"
+                  class="card-img-top img-fluid"
+                  alt="logo"
+                />
+  
+                <div class="card-body">
+                  <h5
+                    class="card-title text-center bg-danger text-light rounded-bottom-3"
+                  >
+                    Gift Packed 1
+                  </h5>
+                  <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                  <p class="card-text">
+                    <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    >BUY NOW</a
+                  >
+                </div>
+              </div>
+            </div>
+  
+
+
+        <!-- msskincaresection -->
+        <div class="row">
+          <h3 class="mt-4 text-center text-white"> <i class="fa-solid fa-hand-holding-hand"></i>
+            MS-<span>kinCare</span></h3>
+          <div class="col-3">
+            <div
+              class="card mt-3 mb-4 ms-4 shadow-lg"
+              style="width: 20rem; height: 33rem"
+            >
+              <img
+                src="./assets/pictures/giftpacks/giftpacks1.png"
+                class="card-img-top img-fluid"
+                alt="logo"
+              />
+
+              <div class="card-body">
+                <h5
+                  class="card-title text-center bg-danger text-light rounded-bottom-3"
+                >
+                  Gift Packed 1
+                </h5>
+                <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                <p class="card-text">
+                  <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary d-flex justify-content-center"
+                  >BUY NOW</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div
+              class="card mt-3 mb-4 ms-4 shadow-lg"
+              style="width: 20rem; height: 33rem"
+            >
+              <img
+                src="./assets/pictures/giftpacks/giftpacks1.png"
+                class="card-img-top img-fluid"
+                alt="logo"
+              />
+
+              <div class="card-body">
+                <h5
+                  class="card-title text-center bg-danger text-light rounded-bottom-3"
+                >
+                  Gift Packed 1
+                </h5>
+                <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                <p class="card-text">
+                  <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary d-flex justify-content-center"
+                  >BUY NOW</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div
+              class="card mt-3 mb-4 ms-4 shadow-lg"
+              style="width: 20rem; height: 33rem"
+            >
+              <img
+                src="./assets/pictures/giftpacks/giftpacks1.png"
+                class="card-img-top img-fluid"
+                alt="logo"
+              />
+
+              <div class="card-body">
+                <h5
+                  class="card-title text-center bg-danger text-light rounded-bottom-3"
+                >
+                  Gift Packed 1
+                </h5>
+                <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                <p class="card-text">
+                  <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary d-flex justify-content-center"
+                  >BUY NOW</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div
+              class="card mt-3 mb-4 ms-4 shadow-lg"
+              style="width: 20rem; height: 33rem"
+            >
+              <img
+                src="./assets/pictures/giftpacks/giftpacks1.png"
+                class="card-img-top img-fluid"
+                alt="logo"
+              />
+
+              <div class="card-body">
+                <h5
+                  class="card-title text-center bg-danger text-light rounded-bottom-3"
+                >
+                  Gift Packed 1
+                </h5>
+                <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                <p class="card-text">
+                  <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary d-flex justify-content-center"
+                  >BUY NOW</a
+                >
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- msInfantcare -->
+        <div class="row">
+          <h3 class="mt-4 text-center text-white"> <i class="fa-solid fa-hands-holding-child"></i>
+            MS-<span>Infant-Care</span></h3>
+          <div class="col-3">
+            <div
+              class="card mt-3 mb-4 ms-4 shadow-lg"
+              style="width: 20rem; height: 33rem"
+            >
+              <img
+                src="./assets/pictures/giftpacks/giftpacks1.png"
+                class="card-img-top img-fluid"
+                alt="logo"
+              />
+
+              <div class="card-body">
+                <h5
+                  class="card-title text-center bg-danger text-light rounded-bottom-3"
+                >
+                  Gift Packed 1
+                </h5>
+                <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                <p class="card-text">
+                  <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary d-flex justify-content-center"
+                  >BUY NOW</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div
+              class="card mt-3 mb-4 ms-4 shadow-lg"
+              style="width: 20rem; height: 33rem"
+            >
+              <img
+                src="./assets/pictures/giftpacks/giftpacks1.png"
+                class="card-img-top img-fluid"
+                alt="logo"
+              />
+
+              <div class="card-body">
+                <h5
+                  class="card-title text-center bg-danger text-light rounded-bottom-3"
+                >
+                  Gift Packed 1
+                </h5>
+                <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                <p class="card-text">
+                  <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary d-flex justify-content-center"
+                  >BUY NOW</a
+                >
+              </div>
+            </div>
+          </div> 
+          <div class="col-3">
+            <div
+              class="card mt-3 mb-4 ms-4 shadow-lg"
+              style="width: 20rem; height: 33rem"
+            >
+              <img
+                src="./assets/pictures/giftpacks/giftpacks1.png"
+                class="card-img-top img-fluid"
+                alt="logo"
+              />
+
+              <div class="card-body">
+                <h5
+                  class="card-title text-center bg-danger text-light rounded-bottom-3"
+                >
+                  Gift Packed 1
+                </h5>
+                <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                <p class="card-text">
+                  <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary d-flex justify-content-center"
+                  >BUY NOW</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div
+              class="card mt-3 mb-4 ms-4 shadow-lg"
+              style="width: 20rem; height: 33rem"
+            >
+              <img
+                src="./assets/pictures/giftpacks/giftpacks1.png"
+                class="card-img-top img-fluid"
+                alt="logo"
+              />
+
+              <div class="card-body">
+                <h5
+                  class="card-title text-center bg-danger text-light rounded-bottom-3"
+                >
+                  Gift Packed 1
+                </h5>
+                <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                <p class="card-text">
+                  <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary d-flex justify-content-center"
+                  >BUY NOW</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- msHealthsWealth -->
+            <h3 class="mt-4 text-center text-white">  <i class="fa-solid fa-suitcase-medical"></i>
+              MS-<span>Health-<span>S</span>-Wealth</span></h3>
+            <div class="col-3">
+              <div
+                class="card mt-3 mb-4 ms-4 shadow-lg"
+                style="width: 20rem; height: 33rem"
+              >
+                <img
+                  src="./assets/pictures/giftpacks/giftpacks1.png"
+                  class="card-img-top img-fluid"
+                  alt="logo"
+                />
+  
+                <div class="card-body">
+                  <h5
+                    class="card-title text-center bg-danger text-light rounded-bottom-3"
+                  >
+                    Gift Packed 1
+                  </h5>
+                  <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                  <p class="card-text">
+                    <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    >BUY NOW</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                class="card mt-3 mb-4 ms-4 shadow-lg"
+                style="width: 20rem; height: 33rem"
+              >
+                <img
+                  src="./assets/pictures/giftpacks/giftpacks1.png"
+                  class="card-img-top img-fluid"
+                  alt="logo"
+                />
+  
+                <div class="card-body">
+                  <h5
+                    class="card-title text-center bg-danger text-light rounded-bottom-3"
+                  >
+                    Gift Packed 1
+                  </h5>
+                  <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                  <p class="card-text">
+                    <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    >BUY NOW</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                class="card mt-3 mb-4 ms-4 shadow-lg"
+                style="width: 20rem; height: 33rem"
+              >
+                <img
+                  src="./assets/pictures/giftpacks/giftpacks1.png"
+                  class="card-img-top img-fluid"
+                  alt="logo"
+                />
+  
+                <div class="card-body">
+                  <h5
+                    class="card-title text-center bg-danger text-light rounded-bottom-3"
+                  >
+                    Gift Packed 1
+                  </h5>
+                  <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                  <p class="card-text">
+                    <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    >BUY NOW</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div
+                class="card mt-3 mb-4 ms-4 shadow-lg"
+                style="width: 20rem; height: 33rem"
+              >
+                <img
+                  src="./assets/pictures/giftpacks/giftpacks1.png"
+                  class="card-img-top img-fluid"
+                  alt="logo"
+                />
+  
+                <div class="card-body">
+                  <h5
+                    class="card-title text-center bg-danger text-light rounded-bottom-3"
+                  >
+                    Gift Packed 1
+                  </h5>
+                  <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                  <p class="card-text">
+                    <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-primary d-flex justify-content-center"
+                    >BUY NOW</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- ms-gift -->
+            <div class="row">
+              <h3 class="mt-4 text-center text-white">  <i class="fa-solid fa-gifts"> </i> MS-<span
+                >Giftpacks</span></h3>
+              <div class="col-3">
+                <div
+                  class="card mt-3 mb-4 ms-4 shadow-lg"
+                  style="width: 20rem; height: 33rem"
+                >
+                  <img
+                    src="./assets/pictures/giftpacks/giftpacks1.png"
+                    class="card-img-top img-fluid"
+                    alt="logo"
+                  />
+    
+                  <div class="card-body">
+                    <h5
+                      class="card-title text-center bg-danger text-light rounded-bottom-3"
+                    >
+                      Gift Packed 1
+                    </h5>
+                    <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                    <p class="card-text">
+                      <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                    </p>
+                    <a
+                      href="#"
+                      class="btn btn-primary d-flex justify-content-center"
+                      >BUY NOW</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div
+                  class="card mt-3 mb-4 ms-4 shadow-lg"
+                  style="width: 20rem; height: 33rem"
+                >
+                  <img
+                    src="./assets/pictures/giftpacks/giftpacks1.png"
+                    class="card-img-top img-fluid"
+                    alt="logo"
+                  />
+    
+                  <div class="card-body">
+                    <h5
+                      class="card-title text-center bg-danger text-light rounded-bottom-3"
+                    >
+                      Gift Packed 1
+                    </h5>
+                    <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                    <p class="card-text">
+                      <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                    </p>
+                    <a
+                      href="#"
+                      class="btn btn-primary d-flex justify-content-center"
+                      >BUY NOW</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div
+                  class="card mt-3 mb-4 ms-4 shadow-lg"
+                  style="width: 20rem; height: 33rem"
+                >
+                  <img
+                    src="./assets/pictures/giftpacks/giftpacks1.png"
+                    class="card-img-top img-fluid"
+                    alt="logo"
+                  />
+    
+                  <div class="card-body">
+                    <h5
+                      class="card-title text-center bg-danger text-light rounded-bottom-3"
+                    >
+                      Gift Packed 1
+                    </h5>
+                    <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                    <p class="card-text">
+                      <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                    </p>
+                    <a
+                      href="#"
+                      class="btn btn-primary d-flex justify-content-center"
+                      >BUY NOW</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div
+                  class="card mt-3 mb-4 ms-4 shadow-lg"
+                  style="width: 20rem; height: 33rem"
+                >
+                  <img
+                    src="./assets/pictures/giftpacks/giftpacks1.png"
+                    class="card-img-top img-fluid"
+                    alt="logo"
+                  />
+    
+                  <div class="card-body">
+                    <h5
+                      class="card-title text-center bg-danger text-light rounded-bottom-3"
+                    >
+                      Gift Packed 1
+                    </h5>
+                    <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
+                    <p class="card-text">
+                      <strong><i class="fa-solid fa-peso-sign"></i>1,458.00</strong>
+                    </p>
+                    <a
+                      href="#"
+                      class="btn btn-primary d-flex justify-content-center"
+                      >BUY NOW</a
+                    >
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div
+        class="container-fluid position-relative border-top border-4 footerdevprofile mt-5"
+      >
+        <img
+          src="./assets/pictures/headlogo.png"
+          class="position-absolute top-0 end-0 pb-3 pt-2 opacity-50"
+          alt=""
+        />
+        <img
+          src="./assets/pictures/MS-ONLINESHOP_free-file (2).png"
+          class="pt-2 ms-5 mb-3 opacity-50"
+          alt=""
+        />
+
+        <div
+          class="footertext position-absolute top-0 end-50 text-light mt-3 text-center"
+        >
+          <h3 class="fw-bold fs-3">Personal Projects</h3>
+          <h5>
+            <a
+              href="./subprofile.html"
+              target="_blank"
+              class="text-decoration-none text-light text-center"
+              ><strong> REAL JOY L. DULLA</strong></a
+            >
+          </h5>
+          <p><i class="fa-regular fa-copyright"></i> Copyright 2023</p>
+        </div>
+      </div>
+    </footer>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>
