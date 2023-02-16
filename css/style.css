@@ -84,7 +84,8 @@ body {
 }
 
 .bgpacks,
-.btnPbtn
+.btnPbtn,
+.mshopBG
  {
   background-image: linear-gradient(95deg, #99b2dd, #9dfff9, #d664f5);
 }
