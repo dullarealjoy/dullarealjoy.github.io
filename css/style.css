@@ -112,3 +112,35 @@ body {
 #footerrev{
   font-size: 9px;
 }
+
+@media (max-width: 576px) { 
+  .cardGP{
+  
+    width: 20rem !important; 
+    height: 28rem !important;
+  }
+  .cardShop{
+    width: 16rem !important; 
+    height: 30rem !important;
+  }
+}
+@media (max-width: 768px) { 
+  .cardGP{
+  
+    width: 20rem !important; 
+    height: 28rem !important;
+  }
+  .cardShop{
+    width: 16rem !important; 
+    height: 30rem !important;
+  }
+  .carouselOf{
+   width: 10rem !important;
+   height: 25rem !important;
+   
+  }
+  .cardShop{
+    width: 20rem !important; 
+    height: 36rem !important;
+  }
+}

@@ -1107,10 +1107,9 @@
         
           <div class="col-12">
             <nav
-              class="navbar navbar-expand-lg navbar-light bg-dark mt-3 pt-5 z-n1 opacity-25 z-1 py-5">
+              class="navbar navbar-expand-lg navbar-light bg-dark mt-3 pt-5 z-n1 z-1">
               <div class="container-fluid">
-                 <!-- toggle for responsive button -->
-                 <button
+                <button
                  class="navbar-toggler text-light"
                  type="button"
                  data-bs-toggle="offcanvas"
@@ -1118,9 +1117,16 @@
                  aria-controls="offcanvasWithBothOptions"
                >
                  <span><i class="fa-solid fa-qrcode"></i></span>
+    
                </button>
+                <form class="d-flex d-xxl-none d-xl-none d-lg-none" role="search">
+                  <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn bg-info" type="submit">Search</button>
+                </form>
+                 <!-- toggle for responsive button -->
+                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mx-auto mb-2 mb-lg-0 g-5 mt-5">
+                  <ul class="navbar-nav mx-auto mb-2 mb-lg-0 g-5 mt-5 justify-content-between">
                     <li>
                       <a href="#msSkincare" class="dropdown-item fw-bolder mt-2 pe-5 text-light">
                         <i class="fa-solid fa-hand-holding-hand"></i>
@@ -1150,8 +1156,8 @@
                       </a>
                     </li>
                   </ul>
-                  <form class="d-flex mt-5" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <form class="d-flex mt-5 d-block" role="search">
+                    <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-info" type="submit">Search</button>
                   </form>
                 </div>
@@ -1165,11 +1171,11 @@
 
       <main class="mshopBG">
         <div class="row mx-auto">
-          <h3 class="mt-4 text-center text-black fw-bolder fs-1 " id="msPromo">
+          <h3 class="mt-4 text-center text-white fw-bolder fs-1 bg-black opacity-50" id="msPromo">
             <i class="fa-solid fa-receipt"></i> MS-<span>Promo</span>
           </h3>
 
-          <div class="col-xxl-3 col-12">
+          <div class="clearfix col-xxl-3 col-12 col-sm-5 me-md-4">
             <div
               class="card mt-3 mb-4 ms-3 shadow-lg cardShop"
               style="width: 20rem; height: 35rem"
@@ -1201,14 +1207,14 @@
                 </p>
                 <a
                   href="#"
-                  class="btn btn-primary d-flex justify-content-center mt-5"
+                  class="btn btn-primary d-flex justify-content-center mt-5 mt-sm-2 mt-md-4"
                   >BUY NOW</a
                 >
               </div>
             </div>
           </div>
 
-          <div class="col-xxl-3 col-12">
+          <div class="clearfix col-xxl-3 col-12 col-sm-5 ms-md-3">
             <div
               class="card mt-3 mb-4 ms-2 shadow-lg cardShop"
               style="width: 20rem; height: 35rem"
@@ -1241,14 +1247,14 @@
 
                 <a
                   href="#"
-                  class="btn btn-primary d-flex justify-content-center mt-5"
+                  class="btn btn-primary d-flex justify-content-center mt-5 mt-sm-2 mt-md-4"
                   >BUY NOW</a
                 >
               </div>
             </div>
           </div>
 
-          <div class="col-xxl-3 col-12">
+          <div class="clearfix col-xxl-3 col-12 col-sm-5 ms-sm-2">
             <div
               class="card mt-3 mb-4 ms-2 shadow-lg cardShop"
               style="width: 20rem; height: 35rem"
@@ -1278,14 +1284,14 @@
                 </p>
                 <a
                   href="#"
-                  class="btn btn-primary d-flex justify-content-center"
+                  class="btn btn-primary d-flex justify-content-center mt-sm-2 mt-md3"
                   >BUY NOW</a
                 >
               </div>
             </div>
           </div>
 
-          <div class="col-xxl-3 col-12">
+          <div class="clearfix col-xxl-3 col-12 col-sm-5 ms-sm-4 ms-md-3">
             <div
               class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
               style="width: 20rem; height: 35rem"
@@ -1316,7 +1322,7 @@
 
                 <a
                   href="#"
-                  class="btn btn-primary d-flex justify-content-center"
+                  class="btn btn-primary d-flex justify-content-center mt-sm-2"
                   >BUY NOW</a
                 >
               </div>
@@ -1331,9 +1337,9 @@
             >
               <i class="fa-regular fa-heart"></i> MS-<span>Valentines</span>
             </h3>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 me-sm-4 ">
               <div
-                class="card mt-3 mb-4 ms-3 shadow-lg"
+                class="card mt-3 mb-4 ms-3 shadow-lg cardShop"
                 style="width: 20rem; height: 31rem"
               >
                 <img
@@ -1362,15 +1368,15 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-5"
                     >BUY NOW</a
                   >
                 </div>
               </div>
             </div>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 ms-sm-4">
               <div
-                class="card mt-3 mb-4 ms-3 shadow-lg"
+                class="card mt-3 mb-4 ms-3 shadow-lg cardShop"
                 style="width: 20rem; height: 31rem"
               >
                 <img
@@ -1399,15 +1405,15 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-5"
                     >BUY NOW</a
                   >
                 </div>
               </div>
             </div>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 me-sm-4 me-sm-4">
               <div
-                class="card mt-3 mb-4 ms-3 shadow-lg"
+                class="card mt-3 mb-4 ms-3 shadow-lg cardShop"
                 style="width: 20rem; height: 31rem"
               >
                 <img
@@ -1436,20 +1442,20 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-5"
                     >BUY NOW</a
                   >
                 </div>
               </div>
             </div>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 ms-sm-4 ms-sm-4">
               <div
-                class="card mt-3 mb-4 ms-3 shadow-lg"
+                class="card mt-3 mb-4 ms-3 shadow-lg cardShop"
                 style="width: 20rem; height: 31rem"
               >
                 <img
                   src="./assets/pictures/product images/valedition/val6.jpg"
-                  class="card-img-top img-fluid"
+                  class="card-img-top img-fluid h-75"
                   alt="logo"
                 />
 
@@ -1473,16 +1479,16 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-5"
                     >BUY NOW</a
                   >
                 </div>
               </div>
             </div>
             <!-- second column -->
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 me-sm-4 me-sm-4">
               <div
-                class="card mt-3 mb-4 ms-3 shadow-lg"
+                class="card mt-3 mb-4 ms-3 shadow-lg cardShop"
                 style="width: 20rem; height: 32rem"
               >
                 <img
@@ -1511,15 +1517,15 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-4"
                     >BUY NOW</a
                   >
                 </div>
               </div>
             </div>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 ms-sm-4 ms-sm-4">
               <div
-                class="card mt-3 mb-4 ms-3 shadow-lg"
+                class="card mt-3 mb-4 ms-3 shadow-lg cardShop"
                 style="width: 20rem; height: 32rem"
               >
                 <img
@@ -1548,15 +1554,15 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-4"
                     >BUY NOW</a
                   >
                 </div>
               </div>
             </div>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 me-sm-4 me-sm-4">
               <div
-                class="card mt-3 mb-4 ms-3 shadow-lg"
+                class="card mt-3 mb-4 ms-3 shadow-lg cardShop"
                 style="width: 20rem; height: 32rem"
               >
                 <img
@@ -1585,15 +1591,15 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-4"
                     >BUY NOW</a
                   >
                 </div>
               </div>
             </div>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 ms-sm-4 ms-sm-4">
               <div
-                class="card mt-3 mb-4 ms-3 shadow-lg"
+                class="card mt-3 mb-4 ms-3 shadow-lg cardShop"
                 style="width: 20rem; height: 32rem"
               >
                 <img
@@ -1622,7 +1628,7 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-4"
                     >BUY NOW</a
                   >
                 </div>
@@ -1639,9 +1645,9 @@
                   >kinCare</span
                 >
               </h3>
-              <div class="col-xxl-3 col-12">
+              <div class="col-xxl-3 col-12 col-sm-5 clearfix me-sm-4">
                 <div
-                  class="card mt-3 mb-4 ms-4 shadow-lg"
+                  class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                   style="width: 20rem; height: 33rem"
                 >
                   <img
@@ -1664,15 +1670,15 @@
                     </p>
                     <a
                       href="#"
-                      class="btn btn-primary d-flex justify-content-center"
+                      class="btn btn-primary d-flex justify-content-center mt-md-5"
                       >BUY NOW</a
                     >
                   </div>
                 </div>
               </div>
-              <div class="col-xxl-3 col-12">
+              <div class="col-xxl-3 col-12 col-sm-5 clearfix ms-sm-4">
                 <div
-                  class="card mt-3 mb-4 ms-4 shadow-lg"
+                  class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                   style="width: 20rem; height: 33rem"
                 >
                   <img
@@ -1695,15 +1701,15 @@
                     </p>
                     <a
                       href="#"
-                      class="btn btn-primary d-flex justify-content-center"
-                      >BUY NOW</a
+                      class="btn btn-primary d-flex justify-content-center mt-md-5"
+                      >BUY NOW</a 
                     >
                   </div>
                 </div>
               </div>
-              <div class="col-xxl-3 col-12">
+              <div class="col-xxl-3 col-12 col-sm-5 clearfix me-sm-4">
                 <div
-                  class="card mt-3 mb-4 ms-4 shadow-lg"
+                  class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                   style="width: 20rem; height: 33rem"
                 >
                   <img
@@ -1726,15 +1732,15 @@
                     </p>
                     <a
                       href="#"
-                      class="btn btn-primary d-flex justify-content-center"
+                      class="btn btn-primary d-flex justify-content-center mt-md-5"
                       >BUY NOW</a
                     >
                   </div>
                 </div>
               </div>
-              <div class="col-xxl-3 col-12">
+              <div class="col-xxl-3 col-12 col-sm-5 clearfix ms-sm-4">
                 <div
-                  class="card mt-3 mb-4 ms-4 shadow-lg"
+                  class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                   style="width: 20rem; height: 33rem"
                 >
                   <img
@@ -1757,7 +1763,7 @@
                     </p>
                     <a
                       href="#"
-                      class="btn btn-primary d-flex justify-content-center"
+                      class="btn btn-primary d-flex justify-content-center mt-md-5"
                       >BUY NOW</a
                     >
                   </div>
@@ -1765,9 +1771,9 @@
               </div>
 
               <!-- secondpart -->
-              <div class="col-xxl-3 col-12">
+              <div class="col-xxl-3 col-12 col-sm-5 clearfix me-sm-4">
                 <div
-                  class="card mt-3 mb-4 ms-4 shadow-lg"
+                  class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                   style="width: 20rem; height: 33rem"
                 >
                   <img
@@ -1790,15 +1796,15 @@
                     </p>
                     <a
                       href="#"
-                      class="btn btn-primary d-flex justify-content-center"
+                      class="btn btn-primary d-flex justify-content-center mt-md-5"
                       >BUY NOW</a
                     >
                   </div>
                 </div>
               </div>
-              <div class="col-xxl-3 col-12">
+              <div class="col-xxl-3 col-12 col-sm-5 clearfix ms-sm-4">
                 <div
-                  class="card mt-3 mb-4 ms-4 shadow-lg"
+                  class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                   style="width: 20rem; height: 33rem"
                 >
                   <img
@@ -1821,15 +1827,15 @@
                     </p>
                     <a
                       href="#"
-                      class="btn btn-primary d-flex justify-content-center"
+                      class="btn btn-primary d-flex justify-content-center mt-md-5"
                       >BUY NOW</a
                     >
                   </div>
                 </div>
               </div>
-              <div class="col-xxl-3 col-12">
+              <div class="col-xxl-3 col-12 col-sm-5 clearfix me-sm-4">
                 <div
-                  class="card mt-3 mb-4 ms-4 shadow-lg"
+                  class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                   style="width: 20rem; height: 33rem"
                 >
                   <img
@@ -1852,15 +1858,15 @@
                     </p>
                     <a
                       href="#"
-                      class="btn btn-primary d-flex justify-content-center"
+                      class="btn btn-primary d-flex justify-content-center mt-md-5"
                       >BUY NOW</a
                     >
                   </div>
                 </div>
               </div>
-              <div class="col-xxl-3 col-12">
+              <div class="col-xxl-3 col-12 col-sm-5 clearfix ms-sm-4">
                 <div
-                  class="card mt-3 mb-4 ms-4 shadow-lg"
+                  class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                   style="width: 20rem; height: 33rem"
                 >
                   <img
@@ -1883,7 +1889,7 @@
                     </p>
                     <a
                       href="#"
-                      class="btn btn-primary d-flex justify-content-center"
+                      class="btn btn-primary d-flex justify-content-center mt-md-5"
                       >BUY NOW</a
                     >
                   </div>
@@ -1901,9 +1907,9 @@
                 >Infant-Care</span
               >
             </h3>
-            <div class="col-xxl-3">
+            <div class="clearfix col-xxl-3 col-sm-5 me-sm-4">
               <div
-                class="card mt-3 mb-4 ms-4 shadow-lg"
+                class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                 style="width: 20rem; height: 33rem"
               >
                 <img
@@ -1927,15 +1933,15 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-5"
                     >BUY NOW</a
                   >
                 </div>
               </div>
             </div>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 ms-sm-4">
               <div
-                class="card mt-3 mb-4 ms-4 shadow-lg"
+                class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                 style="width: 20rem; height: 33rem"
               >
                 <img
@@ -1959,15 +1965,15 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-5"
                     >BUY NOW</a
                   >
                 </div>
               </div>
             </div>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 me-sm-4">
               <div
-                class="card mt-3 mb-4 ms-4 shadow-lg"
+                class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                 style="width: 20rem; height: 33rem"
               >
                 <img
@@ -1999,9 +2005,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 ms-sm-4">
               <div
-                class="card mt-3 mb-4 ms-4 shadow-lg"
+                class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                 style="width: 20rem; height: 33rem"
               >
                 <img
@@ -2025,15 +2031,15 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-5"
                     >BUY NOW</a
                   >
                 </div>
               </div>
             </div>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 me-sm-4">
               <div
-                class="card mt-3 mb-4 ms-4 shadow-lg"
+                class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                 style="width: 20rem; height: 33rem"
               >
                 <img
@@ -2057,15 +2063,15 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-5"
                     >BUY NOW</a
                   >
                 </div>
               </div>
             </div>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 ms-sm-4">
               <div
-                class="card mt-3 mb-4 ms-4 shadow-lg"
+                class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                 style="width: 20rem; height: 33rem"
               >
                 <img
@@ -2095,9 +2101,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 me-sm-4">
               <div
-                class="card mt-3 mb-4 ms-4 shadow-lg"
+                class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                 style="width: 20rem; height: 33rem"
               >
                 <img
@@ -2127,9 +2133,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 ms-sm-4">
               <div
-                class="card mt-3 mb-4 ms-4 shadow-lg"
+                class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
                 style="width: 20rem; height: 33rem"
               >
                 <img
@@ -2170,9 +2176,9 @@
                 >Health-<span>S</span>-Wealth</span
               >
             </h3>
-            <div class="col-xxl-4 col-12">
+            <div class="clearfix col-xxl-4 col-12 col-sm-5 me-sm-4">
               <div
-                class="card shadow-lg mx-auto mt-3"
+                class="card shadow-lg mx-auto mt-3 cardShop"
                 style="width: 20rem; height: 36rem"
               >
                 <img
@@ -2203,9 +2209,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-xxl-4 col-12">
+            <div class="clearfix col-xxl-4 col-12 col-sm-5 ms-sm-4">
               <div
-                class="card shadow-lg mx-auto mt-3"
+                class="card shadow-lg mx-auto mt-3 cardShop"
                 style="width: 20rem; height: 36rem"
               >
                 <img
@@ -2236,9 +2242,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-xxl-4 col-12">
+            <div class="clearfix col-xxl-4 col-12 col-sm-5 me-sm-4">
               <div
-                class="card shadow-lg mx-auto mt-3"
+                class="card shadow-lg mx-auto mt-3 cardShop"
                 style="width: 20rem; height: 36rem"
               >
                 <img
@@ -2276,9 +2282,9 @@
             <h3 class="my-4 text-center text-dark fw-bolder fs-1">
               <i class="fa-solid fa-gifts"> </i> MS-<span>Giftpacks</span>
             </h3>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 me-sm-4">
               <div
-                class="card mb-4 mx-auto shadow-lg"
+                class="card mb-4 mx-auto shadow-lg cardShop"
                 style="width: 21rem; height: 32rem;"
               >
                 <img
@@ -2301,16 +2307,16 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-5"
                     >BUY NOW</a
                   >
                 </div>
               </div>
             </div>
 
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 ms-sm-4">
               <div
-                class="card mb-4 mx-auto shadow-lg ms-xxl-1"
+                class="card mb-4 mx-auto shadow-lg ms-xxl-1 cardShop"
                 style="width: 21rem;height: 32rem;"
               >
                 <img
@@ -2334,16 +2340,16 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-5"
                     >BUY NOW</a
                   >
                 </div>
               </div>
             </div>
 
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 me-sm-4">
               <div
-                class="card mb-4 mx-auto shadow-lg ms-xxl-1"
+                class="card mb-4 mx-auto shadow-lg ms-xxl-1 cardShop"
                 style="width: 21rem;height: 32rem;"
               >
                 <img
@@ -2373,9 +2379,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-xxl-3 col-12">
+            <div class="clearfix col-xxl-3 col-12 col-sm-5 ms-sm-4">
               <div
-                class="card mb-4 mx-auto shadow-lg ms-xxl-1"
+                class="card mb-4 mx-auto shadow-lg ms-xxl-1 cardShop"
                 style="width: 21rem;height: 32rem;"
               >
                 <img
@@ -2399,7 +2405,7 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn-primary d-flex justify-content-center"
+                    class="btn btn-primary d-flex justify-content-center mt-md-5"
                     >BUY NOW</a
                   >
                 </div>
