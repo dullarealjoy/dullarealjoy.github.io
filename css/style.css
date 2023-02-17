@@ -109,3 +109,6 @@ body {
 .footerdevprofile{
   background-image: linear-gradient(95deg, #518bf0, #7ca19f, #d664f5);
 }
+#footerrev{
+  font-size: 9px;
+}
