@@ -555,7 +555,7 @@
       <header>
         <div class="col-12">
           <div class="header-top">
-            <nav class="navbar navbar-expand-lg bg-info z-1 fixed-top z-2">
+            <nav class="navbar navbar-expand-lg bg-info fixed-top">
               <div class="container-fluid">
                 <a href="./index.html" class="navbar-brand">
                   <i class="fa-duotone fa-m fw-bolder fs-3"></i
@@ -563,15 +563,14 @@
                 </a>
                 <!-- toggle for responsive button -->
                 <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#offcanvasWithBothOptions"
-                  aria-expanded="false"
-                  aria-label="Toggle-navigation"
-                >
-                  <i class="fa-solid fa-bars-staggered"></i>
-                </button>
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"
+              >
+                <span><i class="fa-solid fa-qrcode"></i></span>
+              </button>
 
                 <div class="collapse navbar-collapse" id="MyNvbarContent">
                   <!-- navcontent -->
@@ -621,72 +620,70 @@
             </nav>
           </div>
         </div>
-        <div class="col-12">
-          <nav
-            class="navbar navbar-expand-lg navbar-light bg-dark fixed-top mt-3 pt-5 z-1 bg-opacity-75">
-            <div class="container-fluid">
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              ></button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 g-5">
-                  <li>
-                    <a href="#msSkincare" class="dropdown-item fw-bolder mt-2 pe-5 text-light">
-                      <i class="fa-solid fa-hand-holding-hand"></i>
-                      MS-<span>kinCare</span>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#msInfantcare" class="dropdown-item fw-bolder mt-2 pe-5 text-light">
-                      <i class="fa-solid fa-hands-holding-child"></i>
-                      MS-<span>Infant-Care</span>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#MsHealthsWealth" class="dropdown-item fw-bolder mt-2 pe-5 text-light">
-                      <i class="fa-solid fa-suitcase-medical"></i>
-                      MS-<span>Health-<span>S</span>-Wealth</span>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#msGiftpack" class="dropdown-item fw-bolder mt-2 text-light">
-                      <i class="fa-solid fa-gifts"> </i> MS-<span
-                        >Giftpacks</span
-                      >
-                    </a>
-                  </li>
-                </ul>
+        
+          <div class="col-12">
+            <nav
+              class="navbar navbar-expand-lg navbar-light bg-dark mt-3 pt-5 z-n1 bg-opacity-75 z-1 py-5">
+              <div class="container-fluid">
+               
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mx-auto mb-2 mb-lg-0 g-5 mt-5">
+                    <li>
+                      <a href="#msSkincare" class="dropdown-item fw-bolder mt-2 pe-5 text-light">
+                        <i class="fa-solid fa-hand-holding-hand"></i>
+                        MS-<span>kinCare</span>
+                      </a>
+                    </li>
+  
+                    <li>
+                      <a href="#msInfantcare" class="dropdown-item fw-bolder mt-2 pe-5 text-light">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                        MS-<span>Infant-Care</span>
+                      </a>
+                    </li>
+  
+                    <li>
+                      <a href="#MsHealthsWealth" class="dropdown-item fw-bolder mt-2 pe-5 text-light">
+                        <i class="fa-solid fa-suitcase-medical"></i>
+                        MS-<span>Health-<span>S</span>-Wealth</span>
+                      </a>
+                    </li>
+  
+                    <li>
+                      <a href="#msGiftpack" class="dropdown-item fw-bolder mt-2 text-light">
+                        <i class="fa-solid fa-gifts"> </i> MS-<span
+                          >Giftpacks</span
+                        >
+                      </a>
+                    </li>
+                  </ul>
+                  <form class="d-flex mt-5" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Search</button>
+                  </form>
+                </div>
               </div>
-            </div>
-          </nav>
-        </div>
+            </nav>
+          </div>
+         </div>
       </header>
-
+       
       <!-- ********* -->
 
       <main class="mshopBG">
         <div class="row mx-auto">
-          <h3 class="mt-4 text-center text-black fw-bolder fs-1" id="msPromo">
+          <h3 class="mt-4 text-center text-black fw-bolder fs-1 " id="msPromo">
             <i class="fa-solid fa-receipt"></i> MS-<span>Promo</span>
           </h3>
 
-          <div class="col-3">
+          <div class="col-xxl-3 col-12">
             <div
-              class="card mt-3 mb-4 ms-3 shadow-lg"
+              class="card mt-3 mb-4 ms-3 shadow-lg cardShop"
               style="width: 20rem; height: 35rem"
             >
               <img
                 src="./assets/pictures/product images/discounts/discount(1).png"
-                class="card-img-top img-fluid"
+                class="card-img-top img-fluid "
                 alt="logo"
               />
 
@@ -718,9 +715,9 @@
             </div>
           </div>
 
-          <div class="col-3">
+          <div class="col-xxl-3 col-12">
             <div
-              class="card mt-3 mb-4 ms-2 shadow-lg"
+              class="card mt-3 mb-4 ms-2 shadow-lg cardShop"
               style="width: 20rem; height: 35rem"
             >
               <img
@@ -758,9 +755,9 @@
             </div>
           </div>
 
-          <div class="col-3">
+          <div class="col-xxl-3 col-12">
             <div
-              class="card mt-3 mb-4 ms-2 shadow-lg"
+              class="card mt-3 mb-4 ms-2 shadow-lg cardShop"
               style="width: 20rem; height: 35rem"
             >
               <img
@@ -795,9 +792,9 @@
             </div>
           </div>
 
-          <div class="col-3">
+          <div class="col-xxl-3 col-12">
             <div
-              class="card mt-3 mb-4 ms-4 shadow-lg"
+              class="card mt-3 mb-4 ms-4 shadow-lg cardShop"
               style="width: 20rem; height: 35rem"
             >
               <img
@@ -841,7 +838,7 @@
             >
               <i class="fa-regular fa-heart"></i> MS-<span>Valentines</span>
             </h3>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-3 shadow-lg"
                 style="width: 20rem; height: 31rem"
@@ -878,7 +875,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-3 shadow-lg"
                 style="width: 20rem; height: 31rem"
@@ -915,7 +912,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-3 shadow-lg"
                 style="width: 20rem; height: 31rem"
@@ -952,7 +949,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-3 shadow-lg"
                 style="width: 20rem; height: 31rem"
@@ -990,7 +987,7 @@
               </div>
             </div>
             <!-- second column -->
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-3 shadow-lg"
                 style="width: 20rem; height: 32rem"
@@ -1027,7 +1024,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-3 shadow-lg"
                 style="width: 20rem; height: 32rem"
@@ -1064,7 +1061,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-3 shadow-lg"
                 style="width: 20rem; height: 32rem"
@@ -1101,7 +1098,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-3 shadow-lg"
                 style="width: 20rem; height: 32rem"
@@ -1149,7 +1146,7 @@
                   >kinCare</span
                 >
               </h3>
-              <div class="col-3">
+              <div class="col-xxl-3 col-12">
                 <div
                   class="card mt-3 mb-4 ms-4 shadow-lg"
                   style="width: 20rem; height: 33rem"
@@ -1180,7 +1177,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-xxl-3 col-12">
                 <div
                   class="card mt-3 mb-4 ms-4 shadow-lg"
                   style="width: 20rem; height: 33rem"
@@ -1211,7 +1208,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-xxl-3 col-12">
                 <div
                   class="card mt-3 mb-4 ms-4 shadow-lg"
                   style="width: 20rem; height: 33rem"
@@ -1242,7 +1239,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-xxl-3 col-12">
                 <div
                   class="card mt-3 mb-4 ms-4 shadow-lg"
                   style="width: 20rem; height: 33rem"
@@ -1275,7 +1272,7 @@
               </div>
 
               <!-- secondpart -->
-              <div class="col-3">
+              <div class="col-xxl-3 col-12">
                 <div
                   class="card mt-3 mb-4 ms-4 shadow-lg"
                   style="width: 20rem; height: 33rem"
@@ -1306,7 +1303,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-xxl-3 col-12">
                 <div
                   class="card mt-3 mb-4 ms-4 shadow-lg"
                   style="width: 20rem; height: 33rem"
@@ -1337,7 +1334,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-xxl-3 col-12">
                 <div
                   class="card mt-3 mb-4 ms-4 shadow-lg"
                   style="width: 20rem; height: 33rem"
@@ -1368,7 +1365,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-xxl-3 col-12">
                 <div
                   class="card mt-3 mb-4 ms-4 shadow-lg"
                   style="width: 20rem; height: 33rem"
@@ -1411,7 +1408,7 @@
                 >Infant-Care</span
               >
             </h3>
-            <div class="col-3">
+            <div class="col-xxl-3">
               <div
                 class="card mt-3 mb-4 ms-4 shadow-lg"
                 style="width: 20rem; height: 33rem"
@@ -1443,7 +1440,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-4 shadow-lg"
                 style="width: 20rem; height: 33rem"
@@ -1475,7 +1472,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-4 shadow-lg"
                 style="width: 20rem; height: 33rem"
@@ -1509,7 +1506,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-4 shadow-lg"
                 style="width: 20rem; height: 33rem"
@@ -1541,7 +1538,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-4 shadow-lg"
                 style="width: 20rem; height: 33rem"
@@ -1573,7 +1570,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-4 shadow-lg"
                 style="width: 20rem; height: 33rem"
@@ -1605,7 +1602,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-4 shadow-lg"
                 style="width: 20rem; height: 33rem"
@@ -1637,7 +1634,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12">
               <div
                 class="card mt-3 mb-4 ms-4 shadow-lg"
                 style="width: 20rem; height: 33rem"
@@ -1680,14 +1677,14 @@
                 >Health-<span>S</span>-Wealth</span
               >
             </h3>
-            <div class="col-4">
+            <div class="col-xxl-4 col-12">
               <div
                 class="card shadow-lg mx-auto mt-3"
-                style="width: 24rem; height: 44rem"
+                style="width: 20rem; height: 36rem"
               >
                 <img
                   src="./assets/pictures/mscosmetics product/Fern supp/fernD.jpg"
-                  class="card-img-top img-fluid w-100 h-75"
+                  class="card-img-top img-fluid w-75 d-block mx-auto pt-3 rounded-5"
                   alt="logo"
                 />
 
@@ -1698,11 +1695,11 @@
                     HealthSWealth
                   </h5>
                   <p class="card-text text-center">
-                    SY GLOW 7-DAYS WHITENING SET
+                    Cholecaciferol (FERN-D)
                   </p>
                   <p class="card-text text-center">
                     <strong
-                      ><i class="fa-solid fa-peso-sign"></i>1,458.00</strong
+                      ><i class="fa-solid fa-peso-sign"></i>480</strong
                     >
                   </p>
                   <a
@@ -1713,14 +1710,14 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-xxl-4 col-12">
               <div
-                class="card mt-3 mb-4 ms-4 shadow-lg"
-                style="width: 24rem; height: 44rem"
+                class="card shadow-lg mx-auto mt-3"
+                style="width: 20rem; height: 36rem"
               >
                 <img
                   src="./assets/pictures/mscosmetics product/Fern supp/milkca.jpg"
-                  class="card-img-top img-fluid w-100 h-75"
+                  class="card-img-top img-fluid w-50 pt-4 d-block mx-auto rounded-pill "
                   alt="logo"
                 />
 
@@ -1731,11 +1728,11 @@
                     HealthSWealth
                   </h5>
                   <p class="card-text text-center">
-                    SY GLOW 7-DAYS WHITENING SET
+                    Milk Calcium Complex (MILCA)
                   </p>
                   <p class="card-text text-center">
                     <strong
-                      ><i class="fa-solid fa-peso-sign"></i>1,458.00</strong
+                      ><i class="fa-solid fa-peso-sign"></i>1,100</strong
                     >
                   </p>
                   <a
@@ -1746,14 +1743,14 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-xxl-4 col-12">
               <div
-                class="card mt-3 mb-4 ms-4 shadow-lg"
-                style="width: 24rem; height: 44rem"
+                class="card shadow-lg mx-auto mt-3"
+                style="width: 20rem; height: 36rem"
               >
                 <img
                   src="./assets/pictures/mscosmetics product/Fern supp/fernactive.jpg"
-                  class="card-img-top img-fluid w-100 h-75"
+                  class="card-img-top img-fluid w-50 d-block mx-auto pt-4 rounded-5"
                   alt="logo"
                 />
 
@@ -1764,11 +1761,11 @@
                     HealthSWealth
                   </h5>
                   <p class="card-text text-center">
-                    SY GLOW 7-DAYS WHITENING SET
+                    fERN-ACTIVE
                   </p>
                   <p class="card-text text-center">
                     <strong
-                      ><i class="fa-solid fa-peso-sign"></i>1,458.00</strong
+                      ><i class="fa-solid fa-peso-sign"></i>900</strong
                     >
                   </p>
                   <a
@@ -1786,14 +1783,14 @@
             <h3 class="mt-4 text-center text-dark fw-bolder fs-1">
               <i class="fa-solid fa-gifts"> </i> MS-<span>Giftpacks</span>
             </h3>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12 ms-2 ms-xxl-4 g-0">
               <div
-                class="card mb-4 ms-4 shadow-lg"
-                style="width: 20rem; height: 33rem"
+                class="card mb-4 mx-auto shadow-lg"
+                style="width:  19rem; height: 33rem"
               >
                 <img
                   src="./assets/pictures/giftpacks/giftpacks1.png"
-                  class="card-img-top img-fluid"
+                  class="card-img-top img-fluid w-100 mx-auto"
                   alt="logo"
                 />
 
@@ -1818,10 +1815,10 @@
               </div>
             </div>
 
-            <div class="col-3">
+            <div class="col-xxl-3 col-12 ms-2 ms-xxl-2">
               <div
-                class="card mb-4 ms-2 shadow-lg"
-                style="width: 20rem; height: 33rem"
+                class="card mb-4 mx-auto shadow-lg ms-xxl-1"
+                style="width: 19rem; height: 33rem"
               >
                 <img
                   src="./assets/pictures/giftpacks/giftpacks2.png"
@@ -1851,10 +1848,10 @@
               </div>
             </div>
 
-            <div class="col-3">
+            <div class="col-xxl-3 col-12 ms-2 ms-xxl-1">
               <div
-                class="card mb-4 me-4 shadow-lg"
-                style="width: 20rem; height: 33rem"
+                class="card mb-4 mx-auto shadow-lg ms-xxl-1"
+                style="width: 19rem; height: 33rem"
               >
                 <img
                   src="./assets/pictures/giftpacks/giftpacks3.jpg"
@@ -1883,10 +1880,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-xxl-3 col-12 ms-2 ms-xxl-1">
               <div
-                class="card mb-4 shadow-lg"
-                style="width: 20rem; height: 33rem"
+                class="card mb-4 mx-auto shadow-lg ms-xxl-1"
+                style="width:19rem; height: 33rem"
               >
                 <img
                   src="./assets/pictures/giftpacks/giftpacks4.png"
