@@ -113,7 +113,7 @@ body {
   font-size: 9px;
 }
 
-@media (max-width: 576px) { 
+@media (min-width: 576px) { 
   .cardGP{
   
     width: 20rem !important; 
@@ -124,7 +124,7 @@ body {
     height: 30rem !important;
   }
 }
-@media (max-width: 768px) { 
+@media (min-width: 768px) { 
   .cardGP{
   
     width: 20rem !important; 
@@ -143,4 +143,48 @@ body {
     width: 20rem !important; 
     height: 36rem !important;
   }
+
+ 
 }
+
+@media (min-width: 960px) { 
+  .cardGP{
+  
+    width: 20rem !important; 
+    height: 28rem !important;
+  }
+  .cardShop{
+    width: 16rem !important; 
+    height: 30rem !important;
+  }
+  .carouselOf{
+   width: 12rem !important;
+   height: 25rem !important;
+   
+  }
+  .cardShop{
+    width: 10rem !important; 
+    height: 36rem !important;
+  }
+}
+
+/* @media (min-width: 1400px) { 
+  .cardGP{
+  
+    width: 20rem !important; 
+    height: 28rem !important;
+  }
+  .cardShop{
+    width: 16rem !important; 
+    height: 30rem !important;
+  }
+  .carouselOf{
+   width: 19rem !important;
+   height: 26rem !important;
+   
+  }
+  .cardShop{
+    width: 10rem !important; 
+    height: 36rem !important;
+  }
+} */
