@@ -1,2029 +1,982 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MS-OnlineShop</title>
-    <link rel="shortcut icon" type="x-icon" href="./assets/pictures/MS-ONLINESHOP_free-file (2).png">
-    <!-- bootstrap css -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Real|WebDeveloper Portfolio</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link rel="icon" type="image/x-icon" href="/assets/images/headlogo.png" />
+    <meta property="og:image:width" content="1038" />
+    <meta property="og:image:height" content="572" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta name="next-head-count" content="13" />
+    <link rel="preload" href="./css/style.css" as="style" />
+    <link rel="stylesheet" href="./css/style.css" data-n-g="" />
 
-    <!-- Fontawesome icon -->
     <script
       src="https://kit.fontawesome.com/b2e3f012e9.js"
       crossorigin="anonymous"
     ></script>
-
-    <!-- css-connection -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
-
   <body>
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="staticBackdrop"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5 z-2" id="staticBackdropLabel">
-              MemberShip
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form
-              action=""
-              method="post"
-              id="login"
-              autocomplete="off"
-              class="border p-3"
-            >
-              <div class="form-row">
-                <!-- <h4 class="title my-3">Login For Access</h4> -->
-                <div class="col-12">
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1"
-                        ><i class="fas fa-user pt-2"></i
-                      ></span>
-                    </div>
-                    <input
-                      name="username"
-                      type="text"
-                      value=""
-                      class="input form-control"
-                      id="username"
-                      placeholder="Username"
-                      aria-label="Username"
-                      aria-describedby="basic-addon1"
-                    />
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1"
-                        ><i class="fas fa-lock pt-2"></i
-                      ></span>
-                    </div>
-                    <input
-                      name="password"
-                      type="password"
-                      value=""
-                      class="input form-control"
-                      id="password"
-                      placeholder="password"
-                      required="true"
-                      aria-label="password"
-                      aria-describedby="basic-addon1"
-                    />
-                    <div class="input-group-append">
-                      <span
-                        class="input-group-text"
-                        onclick="password_show_hide();"
-                      >
-                        <i class="fas fa-eye pt-2" id="show_eye"></i>
-                        <i
-                          class="fas fa-eye-slash d-none pt-2"
-                          id="hide_eye"
-                        ></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="form-group form-check text-left">
-                    <input
-                      type="checkbox"
-                      name="remember"
-                      class="form-check-input"
-                      id="remember_me"
-                    />
-                    <label class="form-check-label" for="remember_me"
-                      >Remember me</label
-                    >
-                  </div>
-                </div>
-                <div class="col-sm-12 pt-3 text-right">
-                  <p>
-                    New Customer? <a href="./submembership.html">Register</a>
-                  </p>
-                </div>
-                <div class="col-12">
-                  <button class="btn btn-primary" type="" name="">Login</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- offcanvas2 -->
-    <div
-      class="offcanvas offcanvas-start"
-      data-bs-scroll="true"
-      tabindex="0"
-      id="offcanvasWithBothOptions"
-      aria-labelledby="offcanvasWithBothOptionsLabel"
-    >
-      <div class="offcanvas-header mx-auto">
-        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-          <img
-            src="./assets/pictures/MS-ONLINESHOP_free-file (2).png"
-            class="img-fluid d-block w-100"
-            alt=""
-          />
-        </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="offcanvas-body">
-        <div class="row">
-          <div class="col-10">
-            <div class="row me-2">
-              <div class="col-12 ps-3">
-                <div
-                  class="card mt-3 mb-3 pb-2 shadow-lg bg-transparent"
-                  style="width: 20rem; height: 24rem"
-                >
-                  <!-- carousel -->
-
-                  <div
-                    id="bestSellerCarousel"
-                    class="carousel slide"
-                    data-bs-ride="carousel"
-                  >
-                    <div class="carousel-indicators">
-                      <button
-                        type="button"
-                        data-bs-target="#bestSellerCarousel"
-                        data-bs-slide-to="0"
-                        class="active"
-                        aria-current="true"
-                        aria-label="Slide 1"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#bestSellerCarousel"
-                        data-bs-slide-to="1"
-                        aria-label="Slide 2"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#bestSellerCarousel"
-                        data-bs-slide-to="2"
-                        aria-label="Slide 3"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#bestSellerCarousel"
-                        data-bs-slide-to="3"
-                        aria-label="Slide 3"
-                      ></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="5000">
-                        <img
-                          src="./assets/pictures/product images/best seller 1.png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img
-                          src="./assets/pictures/product images/best seller 2.png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img
-                          src="./assets/pictures/product images/best seller 3.png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img
-                          src="./assets/pictures/product images/best seller 4.jpg"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                    </div>
-                    <button
-                      class="carousel-control-prev"
-                      type="button"
-                      data-bs-target="#bestSellerCarousel"
-                      data-bs-slide="prev"
-                    >
-                      <span
-                        class="carousel-control-prev-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                      class="carousel-control-next"
-                      type="button"
-                      data-bs-target="#bestSellerCarousel"
-                      data-bs-slide="next"
-                    >
-                      <span
-                        class="carousel-control-next-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-
-                  <div class="card-body">
-                    <h5 class="card-title text-center fw-bolder">
-                      Best Seller
-                    </h5>
-                    <p class="card-text text-center">
-                      <i class="fa-solid fa-m"></i> Best Selling Products which
-                      touch there life.
-                    </p>
-                    <a
-                      href="/msShop.html"
-                      class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold"
-                      >Check it
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- carousel end -->
-              <div class="col-12">
-                <div
-                  class="card mt-3 mb-3 pb-2 shadow-lg bg-transparent"
-                  style="width: 20rem; height: 24rem"
-                >
-                  <!-- carousel -->
-                  <div
-                    id="NewArrivalCarousel"
-                    class="carousel slide"
-                    data-bs-ride="carousel"
-                  >
-                    <div class="carousel-indicators">
-                      <button
-                        type="button"
-                        data-bs-target="#NewArrivalCarousel"
-                        data-bs-slide-to="0"
-                        class="active"
-                        aria-current="true"
-                        aria-label="Slide 1"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#NewArrivalCarousel"
-                        data-bs-slide-to="1"
-                        aria-label="Slide 2"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#NewArrivalCarousel"
-                        data-bs-slide-to="2"
-                        aria-label="Slide 3"
-                      ></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="6000">
-                        <img
-                          src="./assets/pictures/hp1.png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img
-                          src="./assets/pictures/hp2.png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="6000">
-                        <img
-                          src="./assets/pictures/hp3.png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                    </div>
-                    <button
-                      class="carousel-control-prev"
-                      type="button"
-                      data-bs-target="#NewArrivalCarousel"
-                      data-bs-slide="prev"
-                    >
-                      <span
-                        class="carousel-control-prev-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                      class="carousel-control-next"
-                      type="button"
-                      data-bs-target="#NewArrivalCarousel"
-                      data-bs-slide="next"
-                    >
-                      <span
-                        class="carousel-control-next-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                  <!-- carousel end -->
-
-                  <div class="card-body">
-                    <h5 class="card-title text-center fw-bolder">
-                      New-Arrival
-                    </h5>
-                    <p class="card-text text-center">
-                      <i class="fa-solid fa-m"></i> New Arrival Products which
-                      can Touch your Life.
-                    </p>
-                    <a
-                      href="/msShop.html"
-                      class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold"
-                      >See More</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div
-                  class="card mt-3 mb-3 pb-2 shadow-lg bg-transparent"
-                  style="width: 20rem; height: 24rem"
-                >
-                  <!-- carousel -->
-
-                  <div
-                    id="DscountCarousel"
-                    class="carousel slide"
-                    data-bs-ride="carousel"
-                  >
-                    <div class="carousel-indicators">
-                      <button
-                        type="button"
-                        data-bs-target="#DscountCarousel"
-                        data-bs-slide-to="0"
-                        class="active"
-                        aria-current="true"
-                        aria-label="Slide 1"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#DscountCarousel"
-                        data-bs-slide-to="1"
-                        aria-label="Slide 2"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#DscountCarousel"
-                        data-bs-slide-to="2"
-                        aria-label="Slide 3"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#DscountCarousel"
-                        data-bs-slide-to="3"
-                        aria-label="Slide 3"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#DscountCarousel"
-                        data-bs-slide-to="4"
-                        aria-label="Slide 3"
-                      ></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="5000">
-                        <img
-                          src="./assets/pictures/product images/discounts/discount(4).png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="6000">
-                        <img
-                          src="./assets/pictures/product images/discounts/discount(3).png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="6000">
-                        <img
-                          src="./assets/pictures/product images/discounts/discount(1).png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img
-                          src="./assets/pictures/product images/discounts/discount(5).png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="6000">
-                        <img
-                          src="./assets/pictures/product images/discounts/discount(2).png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                    </div>
-                    <button
-                      class="carousel-control-prev"
-                      type="button"
-                      data-bs-target="#DscountCarousel"
-                      data-bs-slide="prev"
-                    >
-                      <span
-                        class="carousel-control-prev-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                      class="carousel-control-next"
-                      type="button"
-                      data-bs-target="#DscountCarousel"
-                      data-bs-slide="next"
-                    >
-                      <span
-                        class="carousel-control-next-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                  <!-- carousel end -->
-
-                  <div class="card-body">
-                    <h5 class="card-title text-center fw-bolder">Discounts</h5>
-                    <p class="card-text text-center">
-                      <i class="fa-solid fa-m"></i> Affordable Products that
-                      will touch Your life and Family.
-                    </p>
-                    <a
-                      href="./msShop.html#msPromo"
-                      class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold"
-                      >See more</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- Accordion -->
-              <div class="col-12">
-                <div class="accordion" id="accordionExample">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                      <button
-                        class="accordion-button"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
-                      >
-                      <i class="fa-solid fa-m"> - Store</i>
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      class="accordion-collapse collapse show"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div class="accordion-body">
-                        <ul class="navbar-nav ms-auto d-flex">
-                          <li>
-                            <a
-                              href="./msShop.html"
-                              class="dropdown-item fw-bolder mt-2"
-                            >
-                              <i class="fa-brands fa-product-hunt"></i>
-                              MS- <span>Products</span>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              href="./msShop.html#msGiftpack"
-                              class="dropdown-item fw-bolder mt-2"
-                            >
-                              <i class="fa-solid fa-gifts"> </i> MS-<span
-                                >Giftpacks</span
-                              >
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              href="./msShop.html#msSkincare"
-                              class="dropdown-item fw-bolder mt-2"
-                            >
-                              <i class="fa-solid fa-hand-holding-hand"></i>
-                              MS-<span>kinCare</span>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              href="./msShop.html#msInfantcare"
-                              class="dropdown-item fw-bolder mt-2"
-                            >
-                              <i class="fa-solid fa-hands-holding-child"></i>
-                              MS-<span>Infant-Care</span>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              href="./msShop.html#MsHealthsWealth"
-                              class="dropdown-item fw-bolder mt-2"
-                            >
-                              <i class="fa-solid fa-suitcase-medical"></i>
-                              MS-<span>Health-<span>S</span>-Wealth</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--  end of accorDion -->
-              </div>
-              <hr class="my-2">
-              <div class="col-12">
-                <ul class="nav navbar">
-                  <li class="nav-item me-3 ">
-                    <a href="./index.html#msTalks" class="nav-link text-black">
-                      <i class="fa-solid fa-circle-info text-black"></i>
-                      <i class="fa-duotone fa-m fw-bolder text-black"></i>s-Talks</a
-                    >
-                  </li>
-                  <li class="nav-item me-5">
-                    <a
-                      href="#"
-                      type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#staticBackdrop"
-                      target="_self"
-                      class="nav-link text-black"
-                    >
-                      <i class="fa-solid fa-address-card"></i>
-                      <i class="fa-duotone fa-m fw-bolder text-black"></i>emberShip</a
-                    >
-                  </li>
-    
-                  <li class="nav-item me-2 border-top border-3 border-dark">
-                    <a href="#" class="nav-link text-danger">
-                      <i class="fa-solid fa-cart-shopping text-danger"></i>
-                      <i class="fa-duotone fa-m fw-bolder text-danger"></i>-Cart</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- endoffcanvas -->
-
     <!-- offcanvas -->
     <div
-      class="offcanvasMenu offcanvas offcanvas-top h-100 w-auto rounded-2 shadow-lg p-4 mb-4 z-1"
+      class="offcanvas offcanvas-end d-xl-none d-lg-none"
       tabindex="-1"
-      id="offcanvasTop"
-      aria-labelledby="offcanvasTopLabel"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+      data-bs-scroll="true"
       data-bs-backdrop="false"
+      style="max-width: 110px"
     >
-      <div class="offcanvas-header">
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
+      <div class="offcanvas-header mx-auto">
+        <button type="button" data-bs-dismiss="offcanvas">
+          <i
+            class="fa-solid fa-bars-staggered fa-2xl pt-4"
+            style="color: #ffffff"
+          ></i>
+        </button>
       </div>
 
-      <div class="offcanvas-body overflow-y-hidden">
-        <div class="row">
-          <div class="col-10">
-            <div class="row me-2">
+      <div class="offcanvas-body">
+        <ul class="iconclass fw-bolder mt-5 pt-2">
+          <li>
+            <a href="#about-me" class="fs-2 text-dark"
+              ><i
+                class="ico bx bx-user text-blue-700 bx-border-circle bx-tada-hover bg-indigo-50 mt-4"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a href="#skills" class="fs-2 text-dark"
+              ><i
+                class="ico bx bx-code-block text-blue-700 bx-border-circle bx-tada-hover bg-indigo-50 mt-4"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a href="#projects" class="fs-2 text-dark"
+              ><i
+                class="ico bx bxl-html5 text-blue-700 bx-border-circle bx-tada-hover bg-indigo-50 mt-4"
+              ></i
+            ></a>
+          </li>
 
-              <div class="col-4 col-md-2 ps-3 me-md-5 col-xxl-4 me-xxl-0">
-                <div
-                  class="card mt-3 mb-3 pb-2 shadow-lg bg-transparent carouselOf"
-                  style="width: 20rem; height: 24rem"
-                >
-                  <!-- carousel -->
+          <li>
+            <a href="#contact-me" class="fs-2 text-dark"
+              ><i
+                class="ico bx bxs-phone text-blue-700 bx-border-circle bx-tada-hover bg-indigo-50 mt-4"
+              ></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-                  <div
-                    id="bestSellerCarousel"
-                    class="carousel slide"
-                    data-bs-ride="carousel"
-                  >
-                    <div class="carousel-indicators">
-                      <button
-                        type="button"
-                        data-bs-target="#bestSellerCarousel"
-                        data-bs-slide-to="0"
-                        class="active"
-                        aria-current="true"
-                        aria-label="Slide 1"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#bestSellerCarousel"
-                        data-bs-slide-to="1"
-                        aria-label="Slide 2"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#bestSellerCarousel"
-                        data-bs-slide-to="2"
-                        aria-label="Slide 3"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#bestSellerCarousel"
-                        data-bs-slide-to="3"
-                        aria-label="Slide 3"
-                      ></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="5000">
-                        <img
-                          src="./assets/pictures/product images/best seller 1.png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img
-                          src="./assets/pictures/product images/best seller 2.png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img
-                          src="./assets/pictures/product images/best seller 3.png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img
-                          src="./assets/pictures/product images/best seller 4.jpg"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                    </div>
-                    <button
-                      class="carousel-control-prev"
-                      type="button"
-                      data-bs-target="#bestSellerCarousel"
-                      data-bs-slide="prev"
-                    >
-                      <span
-                        class="carousel-control-prev-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                      class="carousel-control-next"
-                      type="button"
-                      data-bs-target="#bestSellerCarousel"
-                      data-bs-slide="next"
-                    >
-                      <span
-                        class="carousel-control-next-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
+    <!-- end offcanvas -->
 
-                  <div class="card-body">
-                    <h5 class="card-title text-center fw-bolder">
-                      Best Seller
-                    </h5>
-                    <p class="card-text text-center">
-                      <i class="fa-solid fa-m"></i> Best Selling Products which
-                      touch there life.
-                    </p>
-                    <a
-                      href="/msShop.html"
-                      class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold mt-md-4"
-                      >Check it
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- carousel end -->
-              <div class="col-4 col-md-2 mx-md-5 mx-lg-5 col-xxl-4 mx-xxl-2 mx-xxl-0">
-                <div
-                  class="card mt-3 mb-3 pb-2 shadow-lg bg-transparent carouselOf"
-                  style="width: 20rem; height: 24rem"
-                >
-                  <!-- carousel -->
-                  <div
-                    id="NewArrivalCarousel"
-                    class="carousel slide"
-                    data-bs-ride="carousel"
-                  >
-                    <div class="carousel-indicators">
-                      <button
-                        type="button"
-                        data-bs-target="#NewArrivalCarousel"
-                        data-bs-slide-to="0"
-                        class="active"
-                        aria-current="true"
-                        aria-label="Slide 1"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#NewArrivalCarousel"
-                        data-bs-slide-to="1"
-                        aria-label="Slide 2"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#NewArrivalCarousel"
-                        data-bs-slide-to="2"
-                        aria-label="Slide 3"
-                      ></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="6000">
-                        <img
-                          src="./assets/pictures/hp1.png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img
-                          src="./assets/pictures/hp2.png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="6000">
-                        <img
-                          src="./assets/pictures/hp3.png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                    </div>
-                    <button
-                      class="carousel-control-prev"
-                      type="button"
-                      data-bs-target="#NewArrivalCarousel"
-                      data-bs-slide="prev"
-                    >
-                      <span
-                        class="carousel-control-prev-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                      class="carousel-control-next"
-                      type="button"
-                      data-bs-target="#NewArrivalCarousel"
-                      data-bs-slide="next"
-                    >
-                      <span
-                        class="carousel-control-next-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                  <!-- carousel end -->
+    <div class="sticky-top bg-gray-900 z-50">
+      <div
+        class="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
+      >
+        <div class="flex items-center justify-between">
+          <a
+            aria-label="RealWebDev"
+            title="RealWebdev"
+            class="inline-flex items-center"
+            href="/"
+          >
+            <img
+              src="./assets/images/headlogo.png"
+              class="img-fluid w-16"
+              alt=""
+            />
+            <span
+              class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase"
+              ><span class="text-blue-500">Real</span>WebDev</span
+            >
+          </a>
 
-                  <div class="card-body">
-                    <h5 class="card-title text-center fw-bolder">
-                      New-Arrival
-                    </h5>
-                    <p class="card-text text-center">
-                      <i class="fa-solid fa-m"></i> New Arrival Products which
-                      can Touch your Life.
-                    </p>
-                    <a
-                      href="/msShop.html"
-                      class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold"
-                      >See More</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-4 col-md-2 ms-md-5 col-lg-4 ms-lg-5 col-xxl-3 me-xxl-0">
-                <div
-                  class="card mt-3 mb-3 pb-2 shadow-lg bg-transparent carouselOf"
-                  style="width: 20rem; height: 24rem"
-                >
-                  <!-- carousel -->
-
-                  <div
-                    id="DscountCarousel"
-                    class="carousel slide"
-                    data-bs-ride="carousel"
-                  >
-                    <div class="carousel-indicators">
-                      <button
-                        type="button"
-                        data-bs-target="#DscountCarousel"
-                        data-bs-slide-to="0"
-                        class="active"
-                        aria-current="true"
-                        aria-label="Slide 1"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#DscountCarousel"
-                        data-bs-slide-to="1"
-                        aria-label="Slide 2"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#DscountCarousel"
-                        data-bs-slide-to="2"
-                        aria-label="Slide 3"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#DscountCarousel"
-                        data-bs-slide-to="3"
-                        aria-label="Slide 3"
-                      ></button>
-                      <button
-                        type="button"
-                        data-bs-target="#DscountCarousel"
-                        data-bs-slide-to="4"
-                        aria-label="Slide 3"
-                      ></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="5000">
-                        <img
-                          src="./assets/pictures/product images/discounts/discount(4).png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="6000">
-                        <img
-                          src="./assets/pictures/product images/discounts/discount(3).png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="6000">
-                        <img
-                          src="./assets/pictures/product images/discounts/discount(1).png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="5000">
-                        <img
-                          src="./assets/pictures/product images/discounts/discount(5).png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="6000">
-                        <img
-                          src="./assets/pictures/product images/discounts/discount(2).png"
-                          class="d-block w-100"
-                          alt="..."
-                          height="190rem"
-                        />
-                      </div>
-                    </div>
-                    <button
-                      class="carousel-control-prev"
-                      type="button"
-                      data-bs-target="#DscountCarousel"
-                      data-bs-slide="prev"
-                    >
-                      <span
-                        class="carousel-control-prev-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                      class="carousel-control-next"
-                      type="button"
-                      data-bs-target="#DscountCarousel"
-                      data-bs-slide="next"
-                    >
-                      <span
-                        class="carousel-control-next-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                  <!-- carousel end -->
-
-                  <div class="card-body">
-                    <h5 class="card-title text-center fw-bolder">Discounts</h5>
-                    <p class="card-text text-center">
-                      <i class="fa-solid fa-m"></i> Affordable Products that
-                      will touch Your life and Family.
-                    </p>
-                    <a
-                      href="./msShop.html#msPromo"
-                      class="btnDrpdown btn btn-info d-flex justify-content-center text-light fw-bold"
-                      >See more</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-2 border-2 border-start border-secondary">
-            <ul class="navbar-nav ms-auto d-flex">
-              <li>
-                <a href="./msShop.html" class="dropdown-item fw-bolder mt-5">
-                  <i class="fa-brands fa-product-hunt"></i>
-                  MS- <span>Products</span>
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="./msShop.html#msGiftpack"
-                  class="dropdown-item fw-bolder mt-2"
-                >
-                  <i class="fa-solid fa-gifts"> </i> MS-<span>Giftpacks</span>
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="./msShop.html#msSkincare"
-                  class="dropdown-item fw-bolder mt-2"
-                >
-                  <i class="fa-solid fa-hand-holding-hand"></i>
-                  MS-<span>kinCare</span>
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="./msShop.html#msInfantcare"
-                  class="dropdown-item fw-bolder mt-2"
-                >
-                  <i class="fa-solid fa-hands-holding-child"></i>
-                  MS-<span>Infant-Care</span>
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="./msShop.html#MsHealthsWealth"
-                  class="dropdown-item fw-bolder mt-2"
-                >
-                  <i class="fa-solid fa-suitcase-medical"></i>
-                  MS-<span>Health-<span>S</span>-Wealth</span>
-                </a>
-              </li>
-            </ul>
+          <ul class="items-center hidden space-x-8 lg:flex">
+            <li>
+              <a
+                href="#about-me"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-blue-accent-200"
+                >About Me</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-blue-accent-200"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-blue-accent-200"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact-me"
+                class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-500 hover:bg-blue-700 focus:shadow-outline focus:outline-none"
+                >Contact Me</a
+              >
+            </li>
+          </ul>
+          <div class="d-xxl-none d-xl-none d-lg-none">
+            <button
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"
+              title="Open Menu"
+              class="p-2 -mr-1 transition duration-200 rounded"
+            >
+              <i class="bx bx-menu-alt-right text-light fs-2"></i>
+            </button>
           </div>
         </div>
       </div>
     </div>
-    <!-- end offcanvas -->
 
-    <header class="overflow-hidden">
-      <nav class="navbar navbar-expand-md bg-info fixed-top z-1">
-        <div class="container-fluid">
-          <a href="./index.html" class="navbar-brand">
-            <i class="fa-duotone fa-m fw-bolder fs-3"></i
-            ><span class="fw-bolder text-secondary">S-OnlineShop</span>
-          </a>
-          <!-- toggle for responsive button -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasWithBothOptions"
-            aria-controls="offcanvasWithBothOptions"
-          >
-            <span><i class="fa-solid fa-qrcode"></i></span>
-          </button>
+    <div class="overflow-hidden">
+      <div
+        class="relative px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 lg:pt-20"
+      >
+        <div
+          class="flex flex-col items-center justify-between w-full lg:flex-row"
+        >
+          <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
+            <div class="max-w-xl mb-6">
+              <h1
+                class="font-sans text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl sm:leading-none max-w-lg mb-6"
+              >
+                Hi there, I 'm
 
-          <div class="collapse navbar-collapse" id="MyNvbarContent">
-            <!-- navcontent -->
-            <ul class="navbar-nav ms-auto d-flex fw-bolder">
-              <!--dropdown-Product-->
-              <li class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle me-3 overflow-y-hidden"
-                  role="button"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasTop"
-                >
-                  <i class="fa-solid fa-store"></i>M<span>Store</span>
-                </a>
-              </li>
-
-              <li class="nav-item me-3">
-                <a href="#msTalks" class="nav-link">
-                  <i class="fa-solid fa-circle-info"></i>
-                  <i class="fa-duotone fa-m fw-bolder"></i>s-Talks</a
-                >
-              </li>
-              <li class="nav-item me-5">
-                <a
-                  href="#"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
-                  target="_self"
-                  class="nav-link"
-                >
-                  <i class="fa-solid fa-address-card"></i>
-                  <i class="fa-duotone fa-m fw-bolder"></i>emberShip</a
-                >
-              </li>
-
-              <li class="nav-item me-2 border-start border-3">
-                <a href="#" class="nav-link">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-duotone fa-m fw-bolder"></i>-Cart</a
-                >
-              </li>
-            </ul>
+                <span class="inline-block text-blue-500">Real Joy</span>
+              </h1>
+              <h2
+                class="typewriter text-gray-700 text-base md:text-lg text-end"
+              >
+                I'm a Web Developer
+              </h2>
+            </div>
+            <a
+              href="./assets/myresume/DullaRealjoyResume.pdf"
+              download
+              class="items-center h-12 px-6 py-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-500 hover:bg-blue-700"
+              ><i class="fa-solid fa-file-pdf"></i> My Resume</a
+            >
+          </div>
+          <div class="flex items-center justify-center lg:w-1/2">
+            <div class="flex w-full relative">
+              <img
+                class="rounded-top shadow bg-body-tertiary"
+                alt=""
+                loading="lazy"
+                width="1000"
+                height="1000"
+                decoding="async"
+                style="color: transparent"
+                src="./assets/images/mp1profile.jpg"
+              />
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
-    <!-- main -->
-    <main>
-      <!-- heroImage -->
-      <div class="hero-image">
-        <video
-          class="video-bg"
-          autoplay
-          muted
-          loop
-          src="./assets/video/herovideobg.mp4"
-        ></video>
-        <div class="hero-text">
-          <h1 class="fs-1 text-light">
-            <strong>Your Choice is My Care!</strong>
-          </h1>
+      </div>
+    </div>
+    <div id="about-me" class="relative bg-gray-900">
+      <div
+        class="barber-pic absolute top-0 left-0 right-0 bottom-0 z-0 opacity-10"
+      ></div>
+      <div
+        class="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 text-white"
+      >
+        <div class="max-w-xl mb-10 md:mx-auto lg:max-w-5xl md:mb-12">
+          <h2
+            class="text-center max-w-lg mx-auto mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-100 sm:text-4xl md:mx-auto"
+          >
+            <span class="relative inline-block">
+              <svg
+                viewBox="0 0 52 24"
+                fill="currentColor"
+                class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+              >
+                <defs>
+                  <pattern
+                    id="27df4f81-c854-45de-942a-fe90f7a300f9"
+                    x="0"
+                    y="0"
+                    width=".135"
+                    height=".30"
+                  >
+                    <circle cx="1" cy="1" r=".7"></circle>
+                  </pattern>
+                </defs>
+                <rect
+                  fill="url(#27df4f81-c854-45de-942a-fe90f7a300f9)"
+                  width="52"
+                  height="24"
+                ></rect>
+              </svg>
+              <span class="relative">About</span>
+            </span>
+            Me
+          </h2>
+          <div class="w-full flex flex-wrap">
+            <div class="w-full lg:w-1/2 p-2 flex items-center">
+              <img
+                alt=""
+                loading="lazy"
+                width="500"
+                height="333"
+                decoding="async"
+                data-nimg="1"
+                class="mx-auto rounded-lg border-gray-800 shadow-md"
+                style="color: transparent"
+                src="./assets/images/rjd.jpg"
+              />
+            </div>
+            <div class="w-full lg:w-1/2 flex flex-col justify-center p-2 py-8">
+              <p class="text-base text-gray-400 md:text-lg">
+                Hello! My name is Real Joy L. Dulla, and I am a passionate web
+                developer with 1 year of experience. I am driven by a strong
+                desire to create functional and visually appealing websites that
+                provide an exceptional user experience. I have a solid
+                foundation in front-end development, with expertise in HTML5,
+                CSS3, and JavaScript. I enjoy leveraging the latest technologies
+                and frameworks, such as React and Angular, to build dynamic and
+                interactive web applications. I am also proficient in back-end
+                development, working with languages like Node.js and PHP, and
+                databases like MySQL and Dbeaver. Throughout my career, I have
+                worked on a wide range of projects, from simple landing pages to
+                complex e-commerce platforms. I thrive in collaborative
+                environments and have a proven track record of delivering
+                high-quality code within tight deadlines. My attention to
+                detail, problem-solving skills, and ability to adapt quickly
+                make me an effective web developer. In addition to my technical
+                skills, I prioritize staying up-to-date with industry trends and
+                best practices.
+              </p>
+              <p class="mt-4 text-base text-gray-400 md:text-lg">
+                I graduated from a bootcamp where I was able to hone and improve
+                my skills as a web developer.I enjoying to solve a problem, web
+                design, and learning new technologies in the IT industry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="skills"
+      class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
+      <div class="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
+        <h2
+          class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
+        >
+          <span class="relative inline-block">
+            <svg
+              viewBox="0 0 52 24"
+              fill="currentColor"
+              class="absolute top-0 -right-28 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+            >
+              <defs>
+                <pattern
+                  id="df31b9f6-a505-42f8-af91-d2b7c3218e5c"
+                  x="0"
+                  y="0"
+                  width=".135"
+                  height=".30"
+                >
+                  <circle cx="1" cy="1" r=".7"></circle>
+                </pattern>
+              </defs>
+              <rect
+                fill="url(#df31b9f6-a505-42f8-af91-d2b7c3218e5c)"
+                width="52"
+                height="24"
+              ></rect>
+            </svg>
+            <span class="relative">My Skills</span>
+          </span>
+        </h2>
+      </div>
+      <div class="grid gap-8 row-gap-8 lg:grid-cols-3">
+        <div class="text-center">
+          <div
+            class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50 mx-auto sm:w-24 sm:h-24"
+          >
+            <i
+              class="fab fa-html5 text-blue-700 text-4xl"
+              aria-hidden="true"
+            ></i>
+          </div>
+          <h6 class="mb-2 font-semibold leading-5 border-b-2 pb-4">FrontEnd</h6>
+          <p>
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+              >HTML
+            </span>
+          </p>
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              CSS
+            </span>
+          </p>
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              Bootstrap
+            </span>
+          </p>
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              JavaScript
+            </span>
+          </p>
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              React
+            </span>
+          </p>
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              API's
+            </span>
+          </p>
+        </div>
 
-          <p class="fw-bold fs-4 text-light mb-5">
-            “The best foundation you can wear is glowing healthy skin.”
+        <div class="text-center">
+          <div
+            class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50 mx-auto sm:w-24 sm:h-24"
+          >
+            <i
+              class="fa-solid fa-code text-blue-700 text-4xl"
+              aria-hidden="true"
+            ></i>
+          </div>
+
+          <h6 class="mb-2 font-semibold leading-5 border-b-2 pb-4">BackEnd</h6>
+
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              NodeJS
+            </span>
           </p>
 
-          <button
-            type="button"
-            class="btn btn-primary bg-transparent fw-bolder fs-1 border-3 border"
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              MySQL
+            </span>
+          </p>
+
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              Sequelize
+            </span>
+          </p>
+
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              RestAPI
+            </span>
+          </p>
+
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              Laravel
+            </span>
+          </p>
+        </div>
+        <div class="text-center">
+          <div
+            class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50 mx-auto sm:w-24 sm:h-24"
           >
-            <a href="#" class="text-decoration-none text-info">
-              <!-- <i class="fa-solid fa-m"></i>-Shop -->
+            <i
+              class="fa-solid fa-screwdriver-wrench text-blue-700 text-4xl"
+              aria-hidden="true"
+            ></i>
+          </div>
+          <h6 class="mb-2 font-semibold leading-5 border-b-2 pb-4">Tools</h6>
+
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              Git
+            </span>
+          </p>
+
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              GitHub
+            </span>
+          </p>
+
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              VSCode
+            </span>
+          </p>
+
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              XAMMP
+            </span>
+          </p>
+
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              Postman
+            </span>
+          </p>
+
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              Dbeaver
+            </span>
+          </p>
+
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              Hostinger
+            </span>
+          </p>
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              Godaddy
+            </span>
+          </p>
+          <p class="mt-2">
+            <span
+              class="px-2 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >
+              CloudFlare
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="projects" class="bg-gray-900">
+      <div
+        class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+      >
+        <div
+          class="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12"
+        >
+          <h2
+            class="max-w-lg mx-auto mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto"
+          >
+            <span class="relative inline-block">
+              <svg
+                viewBox="0 0 52 24"
+                fill="currentColor"
+                class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+              >
+                <defs>
+                  <pattern
+                    id="27df4f81-c854-45de-942a-fe90f7a300f9"
+                    x="0"
+                    y="0"
+                    width=".135"
+                    height=".30"
+                  >
+                    <circle cx="1" cy="1" r=".7"></circle>
+                  </pattern>
+                </defs>
+                <rect
+                  fill="url(#27df4f81-c854-45de-942a-fe90f7a300f9)"
+                  width="52"
+                  height="24"
+                ></rect>
+              </svg>
+              <span class="relative">Projects</span>
+            </span>
+          </h2>
+        </div>
+
+        <div
+          class="grid lg:col-12 sm:max-w-sm sm:mx-auto md:max-w-full lg:max-w-full"
+        >
+          <div class="d-flex flex-wrap">
+            <div class="col-lg-8 col-sm-12 mb-5">
               <img
-                src="./assets/pictures/MS-ONLINESHOP_free-file (2).png"
+                src="./assets/images/project/msonline.png"
+                class="w-100"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="col-lg-4 col-sm-12 ps-lg-1">
+              <div class="p-4 flex flex-col flex-1 rounded-end-3 text-light">
+                <h1 class="inline-block mb-3 text-2xl font-bold leading-5">
+                  MSOnline
+                </h1>
+                <h2
+                  class="inline-block text-gray-600 mb-3 text-xl font-bold leading-5"
+                >
+                  E-Commerce
+                </h2>
+                <p class="mb-2 text-gray-700">
+                  MSONLINE is a Ecommerce platform that allows the user to view
+                  only the products. It is built using (HTML, CSS, Bootstrap,).
+                </p>
+
+                <div class="flex flex-wrap space-x-2 mt-5">
+                  <h2
+                    class="inline-block text-gray-600 mb-3 text-xl font-bold leading-5"
+                  >
+                    Technologies:
+                  </h2>
+                  <span
+                    class="px-2 py-1 mb-2 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-2 py-1 mb-2 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
+                    >CSS</span
+                  >
+                  <span
+                    class="px-2 py-1 mb-2 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
+                    >Bootstrap</span
+                  >
+                  <span
+                    class="px-2 py-1 mb-2 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
+                    >Cloudflare</span
+                  >
+                  <span
+                    class="px-2 py-1 mb-2 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
+                    >Hostinger</span
+                  >
+                </div>
+                <div class="flex flex-wrap space-x-2 mt-5 mx-auto">
+                  <a
+                    href="https://ms-online.rjdulla.online/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label=""
+                    class="inline-flex bg-blue-500 hover:bg-blue-700 shadow hover:shadow-lg px-4 py-2 items-center font-semibold transition duration-300 hover:scale-105 text-white mx-auto rounded-2"
+                    >View Website</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-sm-12 text-white">
+              <div class="p-5 flex flex-col flex-1 rounded-start-3">
+                <h1 class="inline-block mb-3 text-2xl font-bold leading-5">
+                  MangWraph
+                </h1>
+                <h2
+                  class="inline-block text-gray-600 mb-3 text-xl font-bold leading-5"
+                >
+                  E-Commerce
+                </h2>
+                <p class="mb-2 text-gray-700">
+                  MangWraph- is A E-commerce that sells and reserving for
+                  service of different Kinds of Car Wraps.
+                </p>
+
+                <div class="flex flex-wrap space-x-2 mt-5">
+                  <h2
+                    class="inline-block text-gray-600 mb-3 text-xl font-bold leading-5"
+                  >
+                    Technologies:
+                  </h2>
+                  <span
+                    class="px-2 py-1 mb-2 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-2 py-1 mb-2 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
+                    >CSS</span
+                  >
+                  <span
+                    class="px-2 py-1 mb-2 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
+                    >Bootstrap</span
+                  >
+                  <span
+                    class="px-2 py-1 mb-2 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
+                    >Laravel</span
+                  >
+                  <span
+                    class="px-2 py-1 mb-2 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
+                    >Blade</span
+                  >
+                  <span
+                    class="px-2 py-1 mb-2 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
+                    >MySQL</span
+                  >
+                  <span
+                    class="px-2 py-1 mb-2 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
+                    >Cloudflare</span
+                  >
+                  <span
+                    class="px-2 py-1 mb-2 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
+                    >Hostinger</span
+                  >
+                </div>
+                <div class="flex flex-wrap space-x-2 mt-5 mx-auto">
+                  <a
+                    href="http://mangwraph.rjdulla.online"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label=""
+                    class="inline-flex bg-blue-500 hover:bg-blue-700 shadow hover:shadow-lg px-4 py-2 items-center font-semibold transition duration-300 hover:scale-105 text-white mx-auto rounded-2"
+                    >View Website</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <img
+                src="./assets/images/project/Mangwraph.png"
+                class="w-100"
                 alt=""
               />
-            </a>
-          </button>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <!-- Section MsProducts -->
-      <section>
-        <h1 class="Ptitle text-center fs-1 fw-bolder fw-bolder">
-          <i class="fa-solid fa-m"></i> Products
-        </h1>
-        <!-- Carousel -->
-        <div id="HeaderProd" class="carousel slide" data-bs-ride="true">
-          <!-- Indicators/dots -->
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#HeaderProd"
-              data-bs-slide-to="0"
-              class="active visually-hidden"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#HeaderProd"
-              data-bs-slide-to="1"
-              class="visually-hidden";
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#HeaderProd"
-              data-bs-slide-to="2"
-              class="visually-hidden"
-            ></button>
-          </div>
-
-          <!-- The slideshow/carousel1 -->
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="col-xxl-7 col-xl-7 mb-xxl-0 ms-xxl-0 mt-xxl-4 col-12 mb-2">
-                  <img
-                    src="./assets/pictures/product images/skincare.png"
-                    alt="Skincare"
-                    class="d-block rounded-3 ms-xxl-5 mb-xxl-5 img-fluid w-75 mx-auto"
-                  />
-                </div>
-                <div class="col-xxl-5 col-xl-5 col-12">
-                  <!-- card -->
-
-                  <div
-                    class="card mb-xxl-3 pb-xxl-2 mt-xxl-5 me-xxl-5 homeCard"
-                  >
-                    <img
-                      src="./assets/pictures/MS-ONLINESHOP_free-file (2).png"
-                      class="card-img d-block rounded-3 ms-xxl-5 mb-xxl-5 img-fluid w-75 mx-auto"
-                      alt="logo"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title text-center">Skin-Care</h5>
-                      <p class="card-text text-center fs-6">
-                        “Skincare is not superficial because it’s healthcare.
-                        When you have beautiful skin it’s a sign that you have a
-                        healthy mind and body.”
-                      </p>
-                      <a
-                        href="./msShop.html#msSkincare"
-                        class="btn btn-primary d-flex justify-content-center"
-                        >See More</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- carousel 2 -->
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-xxl-7 col-xl-7 mb-xxl-0 ms-xxl-0 mt-xxl-4 col-12 mb-2">
-                  <img
-                    src="./assets/pictures/product images/skincare.png"
-                    alt="logo"
-                    class="card-img d-block rounded-3 ms-xxl-5 mb-xxl-5 img-fluid w-75 mx-auto"
-                  />
-                </div>
-
-                <div class="col-xxl-5 col-xl-5">
-                  <div
-                    class="card mb-xxl-3 pb-xxl-2 mt-xxl-5 me-xxl-5 homeCard"
-                  >
-                    <img
-                      src="./assets/pictures/MS-ONLINESHOP_free-file (2).png"
-                      class="card-img d-block rounded-3 ms-xxl-5 mb-xxl-5 img-fluid w-75 mx-auto"
-                      alt="logo"
-                    />
-
-                    <div class="card-body">
-                      <h5 class="card-title text-center fs-3">
-                        Baby-Essential
-                      </h5>
-                      <p class="card-text text-center fs-4">
-                        "Where your baby comes first!"
-                      </p>
-                      <a
-                        href="./msShop.html#msInfantcare"
-                        class="btn btn-primary d-flex justify-content-center"
-                        >See More</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- carousel3 -->
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-xxl-7 col-xl-7 mb-xxl-0 ms-xxl-0 mt-xxl-4 col-12 mb-2">
-                  <img
-                    src="./assets/pictures/product images/skincare.png"
-                    alt="logo"
-                    class="card-img d-block rounded-3 ms-xxl-5 mb-xxl-5 img-fluid w-75 mx-auto"
-                  />
-                </div>
-
-                <div class="col-xxl-5 col-xl-5">
-                  <div
-                    class="card mb-xxl-3 pb-xxl-2 mt-xxl-5 me-xxl-5 homeCard"
-                  >
-                    <img
-                      src="./assets/pictures/MS-ONLINESHOP_free-file (2).png"
-                      class="card-img d-block rounded-3 ms-xxl-5 mb-xxl-5 img-fluid w-75 mx-auto"
-                      alt="logo"
-                    />
-
-                    <div class="card-body">
-                      <h5 class="card-title text-center fs-3">
-                        Health-Supplements
-                      </h5>
-                      <p class="card-text text-center fs-4">
-                        "Complete vitamins and minerals guaranteed."
-                      </p>
-                      <a
-                        href="./msShop.html#MsHealthsWealth"
-                        class="btn btn-primary d-flex justify-content-center"
-                        >See More</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Left and right controls/icons -->
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#HeaderProd"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#HeaderProd"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon"></span>
-          </button>
-        </div>
-      </section>
-
-      <!-- GiftPacks -->
-
-      <section>
-        <div class="container-fluid text-center bgpacks">
-          <h2 class="fs-1 fw-bolder GpTitle">
-            <i class="fa-solid fa-m"></i> GiftPacks
-          </h2>
-          <div class="row">
-            <div class="clearfix d-flex col-xxl-3 col-xl-3 ms-xl-0 ms-xxl-0 col-sm-5 col-12 ms-3 pb-2">
-              <div
-                class="card mb-xxl-4 ms-xxl-4 mx-sm-auto shadow-lg bg-transparent cardGP"
-                style="width: 20rem; height: 33rem"
-              >
-                <img
-                  src="./assets/pictures/giftpacks/giftpacks1.png"
-                  class="card-img-top img-fluid"
-                  alt="logo"
-                  height="58%"
-                />
-
-                <div class="card-body">
-                  <h5
-                    class="card-title text-center bg-danger text-light rounded-bottom-3"
-                  >
-                    Gift Packed 1
-                  </h5>
-                  <p class="card-text">SY GLOW 7-DAYS WHITENING SET</p>
-                  <p class="card-text">
-                    <strong
-                      ><i class="fa-solid fa-peso-sign"></i>1,458.00</strong
-                    >
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-primary d-flex justify-content-center"
-                    >BUY NOW</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="clearfix d-flex col-xxl-3 col-xl-3 ms-xl-0 ms-xxl-0 pb-xxl-0 col-sm-5 col-12 ms-3 pb-2">
-              <div
-                class="card mb-xxl-4 ms-xxl-4 mx-sm-auto shadow-lg bg-transparent cardGP"
-                style="width: 20rem; height: 33rem"
-              >
-                <img
-                  src="./assets/pictures/giftpacks/giftpacks2.png"
-                  class="card-img-top"
-                  alt="logo"
-                  height="58%"
-                />
-
-                <div class="card-body">
-                  <h5
-                    class="card-title text-center bg-danger text-light rounded-bottom-3"
-                  >
-                    Gift Packed 2
-                  </h5>
-                  <p class="card-text fs-6 mb-0">
-                    SY GLOW REJUVINATING BEAUTY SET QR
-                  </p>
-                  <p class="card-text mb-2">
-                    <strong><i class="fa-solid fa-peso-sign"></i>400.00</strong>
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-primary d-flex justify-content-center"
-                    >BUY NOW</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="clearfix d-flex col-xxl-3 col-xl-3 ms-xl-0 mb-xxl-0 ms-xxl-0 col-sm-5 col-12 ms-3 mb-2">
-              <div
-                class="card mb-xxl-4 ms-xxl-4 mx-sm-auto shadow-lg bg-transparent cardGP"
-                style="width: 20rem; height: 33rem"
-              >
-                <img
-                  src="./assets/pictures/giftpacks/giftpacks3.jpg"
-                  class="card-img-top"
-                  alt="logo"
-                  height="58%"
-                />
-
-                <div class="card-body">
-                  <h5
-                    class="card-title text-center bg-danger text-light rounded-bottom-3"
-                  >
-                    Gift Packed 3
-                  </h5>
-                  <p class="card-text fs-6 mb-4">
-                    SY GLOW WHITENING BEAUTY SET 8
-                  </p>
-                  <p class="card-text mb-2">
-                    <strong><i class="fa-solid fa-peso-sign"></i>300.00</strong>
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-primary d-flex justify-content-center"
-                    >BUY NOW</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="clearfix d-flex col-xxl-3 col-xl-3 ms-xl-0 ms-xxl-0 mb-xxl-0 col-sm-5 col-12 ms-3 mb-2">
-              <div
-                class="card mb-xxl-4 ms-xxl-4 mx-sm-auto shadow-lg bg-transparent cardGP"
-                style="width: 20rem; height: 33rem"
-              >
-                <img
-                  src="./assets/pictures/giftpacks/giftpacks4.png"
-                  class="card-img-top"
-                  alt="logo"
-                  height="58%"
-                />
-
-                <div class="card-body">
-                  <h5
-                    class="card-title text-center bg-danger text-light rounded-bottom-3"
-                  >
-                    Gift Packed 4
-                  </h5>
-                  <p class="card-text fs-6 mb-4">
-                    SY GLOW WHITENING BEAUTY SET 6
-                  </p>
-                  <p class="card-text mb-2">
-                    <strong><i class="fa-solid fa-peso-sign"></i>319.00</strong>
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-primary d-flex justify-content-center"
-                    >BUY NOW</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ValentinesdaySpecial -->
-
-      <section class="mb-xxl-5 mb-sm-0">
-        <div class="container-fluid">
-          <div class="row border-top border-5 border-light">
-            <div
-              class="col-xxl-4 col-xl-4 ms-xxl-1 pe-xxl-5 pe-xxl-2 mt-xxl-5 col-sm-12 rounded-end-pill border-light ValVid bg-transparent"
+    <div
+      id="contact-me"
+      class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
+      <div class="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
+        <h2
+          class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
+        >
+          <span class="relative inline-block">
+            <svg
+              viewBox="0 0 52 24"
+              fill="currentColor"
+              class="absolute top-0 -right-28 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
             >
-              <video
-                class="video-Vbg py-5"
-                autoplay
-                muted
-                loop
-                src="./assets/video/valentinesday.mp4"
-              ></video>
-            </div>
-
+              <defs>
+                <pattern
+                  id="df31b9f6-a505-42f8-af91-d2b7c3218e5c"
+                  x="0"
+                  y="0"
+                  width=".135"
+                  height=".30"
+                >
+                  <circle cx="1" cy="1" r=".7"></circle>
+                </pattern>
+              </defs>
+              <rect
+                fill="url(#df31b9f6-a505-42f8-af91-d2b7c3218e5c)"
+                width="52"
+                height="24"
+              ></rect>
+            </svg>
+            <span class="relative">Contact Me</span>
+          </span>
+        </h2>
+      </div>
+      <div class="grid gap-8 row-gap-5 lg:grid-cols-3">
+        <a
+          href="mailto:dulla.realjoy@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+          aria-label=""
+        >
+          <div
+            class="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-md hover:scale-105 group hover:shadow-xl"
+          >
             <div
-              class="col-xxl-7 col-xl-7 ms-xxl-5 mt-xxl-5 col-sm-12 ms-sm-2 mt-sm-1 mb-sm-1"
-            >
-              <h3 class="PtitleVs text-center">Valentines Day Special</h3>
-
-              <p class="text-light text-start mt-5 pparV fs-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti mollitia sit expedita maxime culpa est voluptatum
-                praesentium velit voluptatibus animi. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Voluptatibus, nesciunt! Cum
-                nesciunt veritatis a. Voluptates, suscipit repellat officiis
-                quisquam facere illo dicta totam? Excepturi officia voluptates
-                aliquid amet iste eaque?
-              </p>
-              <p class="text-light text-start mt-3 pparV fs-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti mollitia sit expedita maxime culpa est voluptatum
-                praesentium velit voluptatibus animi. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Voluptatibus, nesciunt! Cum
-                nesciunt veritatis a. Voluptates, suscipit repellat officiis
-                quisquam facere illo dicta totam? Excepturi officia voluptates
-                aliquid amet iste eaque?
-              </p>
-              <button
-                class="rounded-3 px-4 py-3 btnPbtn border-0 btn text-secondary mt-5 d-flex mx-auto mb-sm-4"
-              >
-                <a href="./msShop.html#msValentines" class="btn" type="button">
-                  <strong>AVAIL NOW</strong>
-                </a>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- mstalks accordion -->
-      <section id="msTalks">
-        <div class="container-fluid mb-4 shadow-lg">
-          <h3 class="PtitleVs text-center">
-            <i class="fa-solid fa-m"></i>S-Talks
-          </h3>
-          <div class="accordion" id="accordionPanelsStayOpenExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                <button
-                  class="accordion-button fs-4 fw-bold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseOne"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseOne"
-                >
-                  ABOUT US
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseOne"
-                class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingOne"
-              >
-                <div class="accordion-body">
-                  <article>
-                    <strong
-                      >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Molestias, dolores.</strong
-                    >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Neque explicabo, necessitatibus placeat nemo praesentium ab
-                    ullam esse totam perspiciatis laudantium, consectetur
-                    debitis maxime mollitia officia sit amet commodi ratione
-                    cupiditate numquam voluptates quod quaerat quidem.
-                    Praesentium iure nam cum. Quaerat dolorum rerum vero! Nihil
-                    tempore ullam laudantium temporibus at saepe?
-                    <br />
-                    <strong
-                      >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Molestias, dolores.</strong
-                    >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Neque explicabo, necessitatibus placeat nemo praesentium ab
-                    ullam esse totam perspiciatis laudantium, consectetur
-                    debitis maxime mollitia officia sit amet commodi ratione
-                    cupiditate numquam voluptates quod quaerat quidem.
-                    Praesentium iure nam cum. Quaerat dolorum rerum vero! Nihil
-                    tempore ullam laudantium temporibus at saepe?
-                    <br />
-                    <strong
-                      >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Molestias, dolores.</strong
-                    >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Neque explicabo, necessitatibus placeat nemo praesentium ab
-                    ullam esse totam perspiciatis laudantium, consectetur
-                    debitis maxime mollitia officia sit amet commodi ratione
-                    cupiditate numquam voluptates quod quaerat quidem.
-                    Praesentium iure nam cum. Quaerat dolorum rerum vero! Nihil
-                    tempore ullam laudantium temporibus at saepe?
-                    <br />
-                    <strong
-                      >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Molestias, dolores.</strong
-                    >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Neque explicabo, necessitatibus placeat nemo praesentium ab
-                    ullam esse totam perspiciatis laudantium, consectetur
-                    debitis maxime mollitia officia sit amet commodi ratione
-                    cupiditate numquam voluptates quod quaerat quidem.
-                    Praesentium iure nam cum. Quaerat dolorum rerum vero! Nihil
-                    tempore ullam laudantium temporibus at saepe?
-                    <br />
-                    <strong
-                      >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Molestias, dolores.</strong
-                    >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Neque explicabo, necessitatibus placeat nemo praesentium ab
-                    ullam esse totam perspiciatis laudantium, consectetur
-                    debitis maxime mollitia officia sit amet commodi ratione
-                    cupiditate numquam voluptates quod quaerat quidem.
-                    Praesentium iure nam cum. Quaerat dolorum rerum vero! Nihil
-                    tempore ullam laudantium temporibus at saepe?
-                    <br />
-                    <strong
-                      >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Molestias, dolores.</strong
-                    >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Neque explicabo, necessitatibus placeat nemo praesentium ab
-                    ullam esse totam perspiciatis laudantium, consectetur
-                    debitis maxime mollitia officia sit amet commodi ratione
-                    cupiditate numquam voluptates quod quaerat quidem.
-                    Praesentium iure nam cum. Quaerat dolorum rerum vero! Nihil
-                    tempore ullam laudantium temporibus at saepe?
-                  </article>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                <button
-                  class="accordion-button collapsed fs-4 fw-bold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseTwo"
-                >
-                  REVIEWS
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseTwo"
-                class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingTwo"
-              >
-                <div class="accordion-body">
-                  <article>
-                    <strong
-                      >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Molestias, dolores.</strong
-                    >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Neque explicabo, necessitatibus placeat nemo praesentium ab
-                    ullam esse totam perspiciatis laudantium, consectetur
-                    debitis maxime mollitia officia sit amet commodi ratione
-                    cupiditate numquam voluptates quod quaerat quidem.
-                    Praesentium iure nam cum. Quaerat dolorum rerum vero! Nihil
-                    tempore ullam laudantium temporibus at saepe?
-                    <br />
-                    <strong
-                      >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Molestias, dolores.</strong
-                    >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Neque explicabo, necessitatibus placeat nemo praesentium ab
-                    ullam esse totam perspiciatis laudantium, consectetur
-                    debitis maxime mollitia officia sit amet commodi ratione
-                    cupiditate numquam voluptates quod quaerat quidem.
-                    Praesentium iure nam cum. Quaerat dolorum rerum vero! Nihil
-                    tempore ullam laudantium temporibus at saepe?
-                    <br />
-                    <strong
-                      >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Molestias, dolores.</strong
-                    >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Neque explicabo, necessitatibus placeat nemo praesentium ab
-                    ullam esse totam perspiciatis laudantium, consectetur
-                    debitis maxime mollitia officia sit amet commodi ratione
-                    cupiditate numquam voluptates quod quaerat quidem.
-                    Praesentium iure nam cum. Quaerat dolorum rerum vero! Nihil
-                    tempore ullam laudantium temporibus at saepe?
-                    <br />
-                    <strong
-                      >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Molestias, dolores.</strong
-                    >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Neque explicabo, necessitatibus placeat nemo praesentium ab
-                    ullam esse totam perspiciatis laudantium, consectetur
-                    debitis maxime mollitia officia sit amet commodi ratione
-                    cupiditate numquam voluptates quod quaerat quidem.
-                    Praesentium iure nam cum. Quaerat dolorum rerum vero! Nihil
-                    tempore ullam laudantium temporibus at saepe?
-                    <br />
-                    <strong
-                      >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Molestias, dolores.</strong
-                    >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Neque explicabo, necessitatibus placeat nemo praesentium ab
-                    ullam esse totam perspiciatis laudantium, consectetur
-                    debitis maxime mollitia officia sit amet commodi ratione
-                    cupiditate numquam voluptates quod quaerat quidem.
-                    Praesentium iure nam cum. Quaerat dolorum rerum vero! Nihil
-                    tempore ullam laudantium temporibus at saepe?
-                    <br />
-                    <strong
-                      >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Molestias, dolores.</strong
-                    >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Neque explicabo, necessitatibus placeat nemo praesentium ab
-                    ullam esse totam perspiciatis laudantium, consectetur
-                    debitis maxime mollitia officia sit amet commodi ratione
-                    cupiditate numquam voluptates quod quaerat quidem.
-                    Praesentium iure nam cum. Quaerat dolorum rerum vero! Nihil
-                    tempore ullam laudantium temporibus at saepe?
-                  </article>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                  <button
-                    class="accordion-button collapsed fs-4 fw-bold"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseThree"
-                    aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseThree"
-                  >
-                    CONTACT US
-                  </button>
-                </h2>
+              class="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-blue-500 group-hover:scale-x-100"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-blue-500 group-hover:scale-y-100"
+            ></div>
+            <div
+              class="absolute top-0 left-0 w-full h-1 duration-300 origin-right transform scale-x-0 bg-blue-500 group-hover:scale-x-100"
+            ></div>
+            <div
+              class="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-blue-500 group-hover:scale-y-100"
+            ></div>
+            <div class="relative p-5 bg-white rounded-sm">
+              <div class="flex flex-col items-center mb-2 lg:flex-row">
                 <div
-                  id="panelsStayOpen-collapseThree"
-                  class="accordion-collapse collapse show"
-                  aria-labelledby="panelsStayOpen-headingThree"
+                  class="flex items-center justify-center w-16 h-16 mb-2 mr-2 rounded-full bg-indigo-50 lg:mb-0 mx-auto"
                 >
-                  <div class="accordion-body">
-                    <div class="col-12 h-100">
-                      <div class="row">
-                        <div class="col-12 text-center mt-3">
-                          <h1 class="fw-bolder fs-1 GpTitle">
-                            CONTACT
-                            <span class="fw-bolder fs-1 contactUs">US</span>
-                          </h1>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-xxl-6 col-xl-6 col-12 px-0">
-                          <div
-                            class="card mb-3 pb-1 pt-2 border-2 border-white bodybg2 ms-2 h-auto"
-                          >
-                            <div class="card-body">
-                              <div class="card-title">
-                                <h3 class="text-light fw-bold fs-3 text-center">
-                                  CONTACT INFORMATION
-                                </h3>
-                              </div>
-                              <p
-                                class="fs-5 text-light col-12 text-center col-xxl-11 col-xl-11 text-xxl-start"
-                              >
-                                <i
-                                  class="fa-solid fa-map-location-dot pe-2 col-12 text-center text-info col-xxl-1 col-xl-1 text-xxl-start"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#MapLocation"
-                                ></i>
-                                Polomolok,South Cotabato-Mindanao Philippines
-                              </p>
-
-                              <!-- Modal-Map -->
-                              <div
-                                class="modal fade"
-                                id="MapLocation"
-                                tabindex="-1"
-                                aria-labelledby="exampleModalLabel"
-                                aria-hidden="true"
-                              >
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h1
-                                        class="modal-title fs-5 text-center"
-                                        id="exampleModalLabel"
-                                      >
-                                        POLOMOLOK SOUTH COTABATO
-                                      </h1>
-                                      <button
-                                        type="button"
-                                        class="btn-close"
-                                        data-bs-dismiss="modal"
-                                        aria-label="Close"
-                                      ></button>
-                                    </div>
-
-                                    <div class="modal-body">
-                                      <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31730.41223060721!2d125.11108623893713!3d6.223915013600044!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f79ad884e04f5f%3A0x5545c85385a34d35!2sMahusay!5e0!3m2!1sen!2sph!4v1676340938917!5m2!1sen!2sph"
-                                        width="322"
-                                        height="450"
-                                        style="border: 0"
-                                        allowfullscreen=""
-                                        loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade"
-                                      ></iframe>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                      <button
-                                        type="button"
-                                        class="btn btn-secondary"
-                                        data-bs-dismiss="modal"
-                                      >
-                                        Close
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <p
-                                class="text-center col-xxl-11 col-xl-11 text-xxl-start text-xl-start clearfix"
-                              >
-                                <i
-                                  class="fa-solid fa-at pe-2 text-info text-center col-12 col-xxl-1 col-xl-1 text-xxl-start clearfix"
-                                ></i>
-                                <a
-                                  href="#"
-                                  type="mail"
-                                  class="fs-4 text-light text-center"
-                                  >User@gmail.com</a
-                                >
-                              </p>
-
-                              <p
-                                class="fw-bold text-light text-center col-xxl-11 col-xl-11 text-xxl-start text-xl-start clearfix"
-                              >
-                                <i
-                                  class="fa-solid fa-phone-volume pe-2 text-info col-12 col-xxl-1 col-xl-1 text-center text-xxl-start text-xl-start clearfix"
-                                ></i
-                                >+639012345678
-                              </p>
-
-                              <div class="card bodybg2">
-                                <h4
-                                  class="card-title ms-2 pb-5 mb-3 text-light mb-xxl-5 pb-xxl-1"
-                                >
-                                  Follow <span class="text-info">Us</span>
-                                </h4>
-                                <div class="card-body pb-3 mb-4">
-                                  <a type="button" href="#"
-                                    ><i
-                                      class="fa-brands fa-facebook fs-2 text-info"
-                                    ></i
-                                  ></a>
-                                  <a type="button" href="#"
-                                    ><i
-                                      class="fa-brands fa-tiktok fs-2 ms-4 text-info"
-                                    ></i>
-                                  </a>
-                                  <a type="button" href="#">
-                                    <i
-                                      class="fa-brands fa-instagram fs-2 ms-4 text-info"
-                                    ></i>
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="col-xxl-6 col-xl-6 col-12">
-                          <div
-                            class="card mb-3 bodybg2 me-2 border-2 border-white"
-                          >
-                            <div class="card-body justify-content-center">
-                              <form>
-                                <div class="row">
-                                  <div
-                                    class="col-xxl-4 col-xl-4 me-xxl-4 text-start col-12"
-                                  >
-                                    <label
-                                      for="CustomerName"
-                                      class="fs-5 fw-bold text-light"
-                                      >Name:</label
-                                    >
-                                  </div>
-
-                                  <div class="col-xxl-7 col-xl-7 col-sm-12">
-                                    <input
-                                      type="text"
-                                      class="form-control InputF"
-                                      placeholder="Enter email"
-                                      name="CustomerName"
-                                    />
-                                  </div>
-
-                                  <div
-                                    class="col-xxl-4 col-xl-4 me-xxl-4 text-start col-12 text-light"
-                                  >
-                                    <label
-                                      for="CustomerPhone"
-                                      class="fs-5 fw-bold text-light"
-                                      >PhoneNo / Telno:</label
-                                    >
-                                  </div>
-
-                                  <div
-                                    class="col-xxl-7 col-xl-7 mt-xxl-3 col-sm-12 mt-sm-2"
-                                  >
-                                    <input
-                                      type="number"
-                                      class="form-control InputF"
-                                      placeholder="09-XXXXXX-XXX"
-                                      name="cosPnumber"
-                                    />
-                                  </div>
-
-                                  <div
-                                    class="col-xxl-4 me-xxl-4 me-xl-4 col-xl-4 text-start col-12 text-light"
-                                  >
-                                    <label
-                                      for="CustomerEmail"
-                                      class="fs-5 fw-bold text-light"
-                                      >E-mail:</label
-                                    >
-                                  </div>
-
-                                  <div
-                                    class="col-xxl-7 col-xl-7 mt-xxl-3 mt-xl-3 col-sm-12 mt-sm-2"
-                                  >
-                                    <input
-                                      type="Email"
-                                      class="form-control InputF text-light"
-                                      placeholder="abc@example.com"
-                                      name="cosMail"
-                                    />
-                                  </div>
-
-                                  <div
-                                    class="col-xxl-4 col-xl-4 me-xxl-4 text-start col-12 text-light"
-                                  >
-                                    <label
-                                      for="Customercommet"
-                                      class="fs-6 fw-bold p-xxl-1 p-xl-1 text-light"
-                                      >Comment:</label
-                                    >
-                                  </div>
-
-                                  <div
-                                    class="col-xxl-12 col-xl-12 d-flex justify-content-end me-xxl-4"
-                                  >
-                                    <textarea
-                                      class="mt-xxl-1 border-1 rounded-2 InputF mx-xxl-2 me-md-5"
-                                      name="form-control"
-                                      id="customerComm"
-                                      cols="80"
-                                      rows="4"
-                                      placeholder="Comment Here"
-                                    ></textarea>
-                                  </div>
-
-                                  <div
-                                    class="col-xxl-12 col-xl-12 text-center justify-content-center d-flex mt-2"
-                                  >
-                                    <button
-                                      class="btn btn-primary rounded-5 px-xxl-4 px-xl-4 mt-xxl-2 mt-xl-2 px-sm-2 mt-sm-1 py-sm-1 py-md-0"
-                                    >
-                                      <p class="fs-5 fw-bold pt-3 text-light">
-                                        Send Message
-                                      </p>
-                                    </button>
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <i class="fa-solid fa-envelope text-blue-700 text-3xl"></i>
                 </div>
+              </div>
+
+              <div class="text-center">
+                <h6 class="font-semibold leading-5">Email</h6>
+              </div>
+
+              <p class="mb-2 text-sm text-gray-900 text-center lg:text-start">
+                Let's get in touch.
+              </p>
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/real-joy-dulla-19980904"
+          target="_blank"
+          rel="noreferrer"
+          aria-label=""
+        >
+          <div
+            class="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-md hover:scale-105 group hover:shadow-xl"
+          >
+            <div
+              class="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-blue-500 group-hover:scale-x-100"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-blue-500 group-hover:scale-y-100"
+            ></div>
+            <div
+              class="absolute top-0 left-0 w-full h-1 duration-300 origin-right transform scale-x-0 bg-blue-500 group-hover:scale-x-100"
+            ></div>
+            <div
+              class="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-blue-500 group-hover:scale-y-100"
+            ></div>
+            <div class="relative p-5 bg-white rounded-sm">
+              <div class="flex flex-col items-center mb-2 lg:flex-row">
+                <div
+                  class="flex items-center justify-center w-16 h-16 mb-2 mr-2 rounded-full bg-indigo-50 lg:mb-0 mx-auto"
+                >
+                  <i class="fa-brands fa-linkedin text-blue-700 text-3xl"></i>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <h6 class="font-semibold leading-5">LinkendIn</h6>
+              </div>
+
+              <p class="mb-2 text-sm text-gray-900 text-center lg:text-start">
+                Let's Connect
+              </p>
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://github.com/dullarealjoy"
+          target="_blank"
+          rel="noreferrer"
+          aria-label=""
+        >
+          <div
+            class="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-md hover:scale-105 group hover:shadow-xl"
+          >
+            <div
+              class="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-blue-500 group-hover:scale-x-100"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-blue-500 group-hover:scale-y-100"
+            ></div>
+            <div
+              class="absolute top-0 left-0 w-full h-1 duration-300 origin-right transform scale-x-0 bg-blue-500 group-hover:scale-x-100"
+            ></div>
+            <div
+              class="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-blue-500 group-hover:scale-y-100"
+            ></div>
+            <div class="relative p-5 bg-white rounded-sm">
+              <div class="flex flex-col items-center mb-2 lg:flex-row">
+                <div
+                  class="flex items-center justify-center w-16 h-16 mb-2 mr-2 rounded-full bg-indigo-50 lg:mb-0 mx-auto"
+                >
+                  <i class="fa-brands fa-github text-blue-700 text-3xl"></i>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <h6 class="font-semibold leading-5">GitHub</h6>
+              </div>
+
+              <p class="mb-2 text-sm text-gray-900 text-center lg:text-start">
+                Check out my Repo.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a class="contactNo" href="#contact-me" rel="noreferrer" aria-label="">
+          <div
+            class="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-md hover:scale-105 group hover:shadow-xl"
+          >
+            <div
+              class="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-blue-500 group-hover:scale-x-100"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-blue-500 group-hover:scale-y-100"
+            ></div>
+            <div
+              class="absolute top-0 left-0 w-full h-1 duration-300 origin-right transform scale-x-0 bg-blue-500 group-hover:scale-x-100"
+            ></div>
+            <div
+              class="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-blue-500 group-hover:scale-y-100"
+            ></div>
+            <div class="relative p-5 bg-white rounded-sm">
+              <div class="flex flex-col items-center mb-2 lg:flex-row">
+                <div
+                  class="flex items-center justify-center w-16 h-16 mb-2 mr-2 rounded-full bg-indigo-50 lg:mb-0 mx-auto"
+                >
+                  <i class="fa-solid fa-phone text-blue-700 text-3xl"></i>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <h6 class="font-semibold leading-5">Phone No.</h6>
+              </div>
+
+              <p class="mb-2 text-sm text-gray-900 text-center lg:text-start">
+                +639071181573
+              </p>
+            </div>
+          </div>
+        </a>
+        <div
+          class="modal fade"
+          id="MapLocation"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31730.41223060721!2d125.11108623893713!3d6.223915013600044!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f79ad884e04f5f%3A0x5545c85385a34d35!2sMahusay!5e0!3m2!1sen!2sph!4v1676340938917!5m2!1sen!2sph"
+                  width="100%"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-    <!-- ContactUS -->
-    <footer>
-     
-      <div class="container-fluid mb-3 footerdevprofile">
-        <div class="row">
-        
-          <div class="col-xxl-1 col-4">
-            <a href="./index.html">
-              <img
-              src="./assets/pictures/MS-ONLINESHOP_free-file (2).png"
-              class="img-fluid w-100 d-block my-2"
-              alt="logo"
+        <a
+          class="address"
+          href=""
+          target=""
+          rel="noreferrer"
+          aria-label=""
+          data-bs-toggle="modal"
+          data-bs-target="#MapLocation"
+        >
+          <div
+            class="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-md hover:scale-105 group hover:shadow-xl"
+          >
+            <div
+              class="absolute bottom-0 left-50 w-full h-1 duration-300 origin-left transform scale-x-0 bg-blue-500 group-hover:scale-x-100"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-blue-500 group-hover:scale-y-100"
+            ></div>
+            <div
+              class="absolute top-0 left-0 w-full h-1 duration-300 origin-right transform scale-x-0 bg-blue-500 group-hover:scale-x-100"
+            ></div>
+            <div
+              class="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-blue-500 group-hover:scale-y-100"
+            ></div>
+            <div class="relative p-5 bg-white rounded-sm">
+              <div class="flex flex-col items-center mb-2 lg:flex-row">
+                <div
+                  class="flex items-center justify-center w-16 h-16 mb-2 mr-2 rounded-full bg-indigo-50 lg:mb-0 mx-auto"
+                >
+                  <i
+                    class="fa-solid fa-location-dot text-blue-700 text-3xl"
+                  ></i>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <h6 class="font-semibold leading-5">Address</h6>
+              </div>
+
+              <p class="mb-2 text-sm text-gray-900 text-center lg:text-start">
+                Mahusay Subd. Polomolok, South Cotabato
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="bg-gray-900">
+      <div
+        class="px-4 pt-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
+      >
+        <div
+          class="flex flex-col justify-center pt-2 pb-10 border-t border-gray-800 sm:flex-row"
+        >
+          <a class="text-sm text-gray-500 text-center" href="/">
+            <img
+              class="img-fluid w-25 mx-auto"
+              src="./assets/images/headlogo.png"
+              alt=""
             />
-            </a>
-            
-          <i class="fa-regular fa-copyright text-white fw-bold"></i><small class="text-white">Copyright <span id="footerrev">2023</span> </small>
-          </div>
-
-          <div class="col-xxl-10 col-5 text-center text-white fw-bolder fs-1">
-            <h3 class="fw-bold fs-xxl-3 fs-6 col-12 mt-2">Personal Projects</h3>
-              <h3 class="mt-2"><strong>  REAL JOY L. DULLA </strong> </h3>
-             
-          </div>
-
-
-          <div class="col-xxl-1 col-3">
-            <img src="./assets/pictures/headlogo.png"
-            class="img-fluid mt-4 opacity-50 mb-3 w-100 d-blocks"
-            alt="logo"/>
-            
-          </div>
+            <span>© Copyright 2023 RealWebDev. All rights reserved.</span>
+          </a>
         </div>
       </div>
-     
-    </footer>
+    </div>
+    <div class="fixed bottom-10 right-5"></div>
 
     <!-- bootstrap js -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>
