@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbg,
+.bodybg2 {
+  background-color: #434a82;
+}
+.body-bg {
+  background-color: #686464;
+}
+
+.txtColor {
+  color: #1ebff0;
+}
+
+.txtcolor2 {
+  color: #686464;
+}
+
+.InputF {
+  background-color: #d9d9d9;
+}
+
+/* main style */
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  min-height: 90vh;
+}
+.video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.video-Vbg {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.ValVid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  min-height: 10%;
+}
+
+body {
+  background-color: #434a82;
+}
+.GpTitle {
+  color: #434a82;
+}
+
+.btnDrpdown {
+  background-color: #0e9adc;
+}
+
+.offcanvasMenu,
+.homeCard {
+  background-color: #c2ecff;
+}
+
+.bgpacks,
+.btnPbtn,
+.mshopBG
+ {
+  background-image: linear-gradient(95deg, #99b2dd, #9dfff9, #d664f5);
+}
+
+.Ptitle {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#99b2dd, #9dfff9, #d664f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.PtitleVs,
+.pparV,
+.contactUs {
+  font-size: 60px;
+  background: -webkit-linear-gradient(#99b2dd, #9dfff9, #d664f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footerdevprofile{
+  background-image: linear-gradient(95deg, #518bf0, #7ca19f, #d664f5);
+}
+#footerrev{
+  font-size: 9px;
+}
+/* mediaQueryreponsiveness */
+@media (min-width: 576px) { 
+  .cardGP{
+  
+    width: 20rem !important; 
+    height: 28rem !important;
+  }
+  .cardShop{
+    width: 16rem !important; 
+    height: 30rem !important;
+  }
+}
+
+
+@media (min-width: 992px) { 
+   .cardGP{
+  
+    width: 20rem !important; 
+    height: 30rem !important;
+  } 
+  .cardShop{
+    width: 16rem !important; 
+    height: 30rem !important;
+  } 
+  .carouselOf{
+   width: 13rem !important;
+   height: 25rem !important;
+   
+  }
+  .cardShop{
+    width: 26rem !important; 
+    height: 41rem !important;
+  }
+
+}
+
+@media (min-width: 1200px) { 
+
+ .carouselOf{
+  width: 19rem !important;
+  height: 24rem !important;
+  
+ }
+
+}
+@media (min-width: 1400px) { 
+
+  .cardShop{
+    width: 18rem !important; 
+    height: 34rem !important;
+  }
+ 
+ } */
+
